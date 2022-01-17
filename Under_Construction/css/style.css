@@ -1,0 +1,54 @@
+.maintenance_container .logo_img img {
+	height: auto;
+	max-width: 100%;
+	padding: 8px;
+}
+.maintenance_container .text_dv p {
+	color: #2d3091;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 12px;
+	margin: 0;
+}
+.maintenance_container .text_dv::after{
+	content: "";
+	background-image: url(../img/header-backer.png);
+	top: 0;
+	right: 0;
+	position: absolute;
+	display: block;
+	height: 100%;
+	width: 56%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: -1;
+}
+.maintenance_container .main_content {
+	align-items: flex-end;
+	display: flex;
+	justify-content: flex-end;
+	height: 100%;
+	padding-right: 120px;
+}
+.maintenance_container .text_dv .email_txt {
+	margin-bottom: 5px;
+}
+.maintenance_container .text_dv .number_txt p {
+	
+}
+.maintenance_container .text_dv .free_dv p {
+	display: inline-block;
+}
+.maintenance_container .text_dv .free_dv .skype_img_logo {
+	max-width: 100%;
+	height: auto;
+	width: 50px;
+}
+.maintenance_container .text_dv .free_dv .whatsapp_img_logo {
+	max-width: 100%;
+	height: auto;
+	width: 29px;
+}
+.maintenance_container .maintenance_img{
+	max-width: 100%;
+}

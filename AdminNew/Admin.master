@@ -1,0 +1,871 @@
+﻿<%@ Master Language="VB" CodeFile="Admin.master.vb" Inherits="Admin_Admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head runat="server" lang="en">
+    <meta charset="utf-8" lang="en" />
+    <title>Administration</title>
+
+    <link rel="Shortcut Icon" href="../Images/Icons/favicon.ico" type="image/x-icon" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <!--<link href="css/uniform.default.css" rel="stylesheet" type="text/css"/>-->
+    <link href="css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+    <link href='https://fonts.googleapis.com/css?family=Signika:400,700,600,300' rel='stylesheet' type='text/css' />
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css' />
+    <!-- Page Specific CSS -->
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+    <%--    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css" />--%>
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="css/select2.css" />
+    <!-- END PAGE LEVEL SCRIPTS -->
+    <!-- BEGIN THEME STYLES -->
+    <link href="css/components.css" id="style_components" rel="stylesheet" type="text/css" />
+    <link href="css/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="css/layout.css" rel="stylesheet" type="text/css" />
+    <link id="style_color" href="css/darkblue.css" rel="stylesheet" type="text/css" />
+    <link href="css/custom.css" rel="stylesheet" type="text/css" />
+    <%--    <link href="css/pace.css" rel="stylesheet" />--%>
+    <!-- END THEME STYLES -->
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+    <script src="js/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <script src="js/jquery.blockui.min.js" type="text/javascript"></script>
+    <script src="js/jquery.cokie.min.js" type="text/javascript"></script>
+    <script src="js/jquery.uniform.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap-switch.min.js" type="text/javascript"></script>
+    <script src="js/metronic.js" type="text/javascript"></script>
+    <script src="js/layout.js" type="text/javascript"></script>
+    <script src="js/quick-sidebar.js" type="text/javascript"></script>
+    <script src="js/demo.js" type="text/javascript"></script>
+    <script src="js/Validation.js"></script>
+    <link rel="stylesheet" href="../css/ui-lightness/jquery-ui-1.8.19.custom.css" />
+    <script lang="ja" type="text/ecmascript">
+        function SetProgressPosition(e) {
+            var posx = 0;
+            var posy = 0;
+            if (!e) var e = window.event;
+            if (e.pageX || e.pageY) {
+                posx = e.pageX;
+                posy = e.pageY;
+            }
+            else if (e.clientX || e.clientY) {
+                posx = e.clientX + document.documentElement.scrollLeft;
+                posy = e.clientY + document.documentElement.scrollTop;
+            }
+            document.getElementById('divProgress').style.left = posx - 20 + "px";
+            document.getElementById('divProgress').style.top = posy - 20 + "px";
+        }
+    </script>
+    <script language="javascript" type="text/javascript">
+
+        function uploadComplete(sender, args) {
+            __doPostBack('upTop', '');
+        }
+
+        function Cancel(e) {
+
+            if (window.event) { // IE
+                event.returnValue = false;
+            }
+            else { // FireFox
+                e.preventDefault();
+            }
+
+            return false;
+        }
+
+        function CheckNumeric(evt) {
+
+            var e = window.event || evt; // for trans-browser compatibility
+            var charCode = e.which || e.keyCode;
+            var bCancel = false;
+
+            if ((charCode < 48 || charCode > 57) & charCode != 8) {
+                bCancel = true;
+            }
+
+            if (bCancel) {
+                return Cancel(e)
+            }
+        }
+
+        function CheckDecimal(field, evt) {
+
+            var e = window.event || evt; // for trans-browser compatibility
+            var charCode = e.which || e.keyCode;
+            var bCancel = false;
+
+            if ((charCode == 46) & ((field.value.indexOf(".") != -1) || (field.value.length < 1))) {
+                bCancel = true;
+            }
+            else if ((charCode < 48 || charCode > 57) & charCode != 8 & charCode != 46) {
+                bCancel = true;
+            }
+
+            if (bCancel) {
+                return Cancel(e)
+            }
+        }
+
+        function CheckDecimalAllowNegative(field, evt) {
+
+            var e = window.event || evt; // for trans-browser compatibility
+            var charCode = e.which || e.keyCode;
+            var bCancel = false;
+
+            if (((charCode == 46) && (field.value == "-")) || (((charCode == 46) && ((field.value.indexOf(".") != -1) || (field.value.length < 1))) || ((charCode == 45) && ((field.value.indexOf("-") != -1) || (field.value.length > 0))))) {
+                bCancel = true;
+            }
+            else if ((charCode < 48 || charCode > 57) & charCode != 8 & charCode != 46 & charCode != 45) {
+                bCancel = true;
+            }
+
+            if (bCancel) {
+                return Cancel(e)
+            }
+        }
+
+        function CheckCurrency(field, evt) {
+
+            var e = window.event || evt; // for trans-browser compatibility
+            var charCode = e.which || e.keyCode;
+            var bCancel = false;
+
+            if ((charCode == 46) && ((field.value.indexOf(".") != -1) || (field.value.length < 1))) {
+                bCancel = true;
+            }
+            else if ((field.value.indexOf(".") != -1) && (field.value.length > (field.value.indexOf(".") + 2))) {
+                bCancel = true;
+            }
+            else if ((charCode < 48 || charCode > 57) & charCode != 8 & charCode != 46) {
+                bCancel = true;
+            }
+
+            if (bCancel) {
+                return Cancel(e)
+            }
+        }
+
+        redirectToPage = function (url) {
+
+            void (window.open(url, "child_window"));
+            return false;
+        }
+
+    </script>
+    <style type="text/css">
+        .overlay {
+            z-index: 100;
+            width: 40px;
+            position: absolute;
+            text-align: center;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="page-header-fixed page-quick-sidebar-over-content " onmousemove="SetProgressPosition(event)">
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="smDownTrade" runat="server"></asp:ScriptManager>
+        <!-- Left menu element-->
+        <div class="page-header navbar navbar-fixed-top">
+            <!-- BEGIN HEADER INNER -->
+            <div class="page-header-inner">
+                <!-- BEGIN LOGO -->
+                <div class="logo">
+                    <a href="Index.aspx">
+                        <%-- <img src="../Images/logo.png" />--%>
+                        <img src="images/inland-logo.png" />
+                    </a>
+                    <div class="menu-toggler sidebar-toggler hide">
+                        <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
+                    </div>
+                </div>
+                <!-- END LOGO -->
+                <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+                <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+                    <img src="images/toggle-img.jpg" />
+                </a>
+                <!-- END RESPONSIVE MENU TOGGLER -->
+                <!-- BEGIN TOP NAVIGATION MENU -->
+                <div class="top-menu">
+                    <ul class="nav navbar-nav pull-right">
+                        <li class="dropdown dropdown-user">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                <%-- <img alt="" class="img-circle" src="images/nick.png" />--%>
+                                <span class="username username-hide-on-mobile">
+                                    <asp:Label ID="lblUserName" runat="server" Text=""></asp:Label></span>
+                                <%--<i class="fa fa-angle-down"></i>--%>
+                            </a>
+                        </li>
+                        <!-- END USER LOGIN DROPDOWN -->
+                        <!-- BEGIN QUICK SIDEBAR TOGGLER -->
+                        <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                        <li class="dropdown dropdown-quick-sidebar-toggler">
+                            <a href="logout.aspx" class="dropdown-toggle">Log Out
+                            </a>
+                        </li>
+                        <!-- END QUICK SIDEBAR TOGGLER -->
+                    </ul>
+                </div>
+                <!-- END TOP NAVIGATION MENU -->
+
+            </div>
+            <!-- END HEADER INNER -->
+        </div>
+        <!-- END HEADER -->
+        <div class="clearfix">
+        </div>
+        <!-- BEGIN CONTAINER -->
+        <div class="page-container">
+            <!-- BEGIN SIDEBAR -->
+            <div class="page-sidebar-wrapper">
+                <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+                <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+                <div class="page-sidebar navbar-collapse collapse">
+                    <!-- BEGIN SIDEBAR MENU -->
+                    <!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
+                    <!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
+                    <!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
+                    <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+                    <!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
+                    <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+                    <ul class="page-sidebar-menu" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="display: block" runat="server" id="sidemenu">
+                        <!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
+
+                        <li class="sidebar-toggler-wrapper">
+                            <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+                            <div class="sidebar-toggler">
+                                <img src="images/toggle-img.jpg" alt="toggle" />
+                            </div>
+                            <!-- END SIDEBAR TOGGLER BUTTON -->
+                        </li>
+                        <!-- DOC: To remove the search box from the sidebar you just need to completely remove the below "sidebar-search-wrapper" LI element -->
+                        <li class="sidebar-search-wrapper">
+                            <!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
+                            <!-- DOC: Apply "sidebar-search-bordered" class the below search form to have bordered search box -->
+                            <!-- DOC: Apply "sidebar-search-bordered sidebar-search-solid" class the below search form to have bordered & solid search box -->
+                            <div class="logo-addg">
+                                <a href="Index.aspx">
+                                    <%--<img src="../images/admin-logo.png" alt="logo" />--%></a>
+                            </div>
+                            <!-- END RESPONSIVE QUICK SEARCH FORM -->
+                        </li>
+                        <li class="start" id="liDashboard" runat="server">
+                            <a href="Index.aspx">
+                                <i class="fa fa-home"></i>
+                                <span class="title">Dashboard</span>
+                                <span class="selected"></span>
+                            </a>
+                        </li>
+                        <li class="start" id="liDashboardActionAgenda" runat="server" visible="false">
+                            <a href="Dashboard_Action_Agenda.aspx">
+                                <i class="fa fa-home"></i>
+                                <span class="title">Dashboard</span>
+                                <span class="selected"></span>
+                            </a>
+                        </li>
+                        <li runat="server" id="liToDoList">
+                            <a href="javascript:;">
+                                <i class="fa fa-user-plus"></i>
+                                <span class="title">To Do List </span>
+                                <span class="selected"></span>
+                                <span id="Span1" runat="server" class="arrow "></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li runat="server" id="li9">
+                                    <a href="AddTask.aspx"><i class="fa fa-user-plus"></i>
+                                        <asp:Label ID="lblAddToDoList" runat="server" Text="Add Task"></asp:Label>
+                                    </a>
+                                </li>
+                                <li id="li10" runat="server">
+                                    <a href="ManageTasks.aspx"><i class="fa fa-user-plus"></i>Manage Tasks</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="liuserBrokers" runat="server">
+                            <a href="#"><i class="fa fa-user-plus"></i><span class="title">Brokers </span>
+                                <span class="selected"></span>
+                                <span id="spBrokerList" runat="server" class="arrow "></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li runat="server" id="liuserBrokerslist">
+                                    <%--<a href="BrokerList.aspx"><i class="fa fa-user-plus"></i>Brokers</a>--%>
+                                    <a href="ManageBroker.aspx"><i class="fa fa-user-plus"></i>Brokers</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li runat="server" id="liVendor">
+                            <a href="javascript:;">
+                                <i class="fa fa-user-plus"></i>
+                                <span class="title">Vendor </span>
+                                <span class="selected"></span>
+                                <span id="sVendor" runat="server" class="arrow "></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li runat="server" id="liAddVendor">
+                                    <a href="AddVendor.aspx"><i class="fa fa-user-plus"></i>
+                                        <asp:Label ID="lbladdvendor" runat="server" Text="Add Vendor"></asp:Label>
+                                    </a>
+                                </li>
+                                <li id="liManageVendors" runat="server">
+                                    <a href="ManageVendors.aspx"><i class="fa fa-user-plus"></i>Manage Vendors   </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li runat="server" id="liproperty">
+                            <a href="javascript:;">
+                                <i class="fa fa-building"></i>
+                                <span class="title">Property </span>
+                                <span class="selected"></span>
+                                <span id="sproperty" runat="server" class="arrow "></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li runat="server" id="liLatest">
+                                    <a href="LatestProperties.aspx"><i class="fa fa-user-plus"></i>Latest Property    </a>
+                                </li>
+                                <li runat="server" id="liFeatured">
+                                    <a href="FeaturedProperties.aspx"><i class="fa fa-user-plus"></i>Featured Property    </a>
+                                </li>
+                                <li runat="server" id="li2">
+                                    <a href="ExclusiveProperties.aspx"><i class="fa fa-user-plus"></i>Exclusive Property</a>
+                                </li>
+                                <li runat="server" id="liaddproperty">
+                                    <a href="Property_General.aspx"><i class="fa fa-user-plus"></i>
+                                        <asp:Label ID="lblAddProperty" runat="server" Text="Add Property"></asp:Label>
+                                    </a>
+                                </li>
+                                <li id="liManageProperties" runat="server">
+                                    <a href="ManageProperties.aspx"><i class="fa fa-building"></i>Manage Properties</a>
+                                </li>
+                                <li id="liViewAll" runat="server" style="display: block;">
+                                    <a href="ManageProperties.aspx?ViewAll=1"><i class="fa fa-building"></i>View ALL</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li runat="server" id="liclients">
+                            <a href="javascript:;">
+                                <i class="fa fa-user-plus"></i>
+                                <span class="title">Client </span>
+                                <span class="selected"></span>
+                                <span id="spclient" runat="server" class="arrow "></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li runat="server" id="liaddcleint">
+                                    <asp:LinkButton ID="lbladdcl" runat="server" OnClick="lbladdcl_Click">
+                                        <i class="fa fa-user-plus"></i>
+                                        <asp:Label ID="lblClinet" runat="server" Text="Client"></asp:Label>
+                                    </asp:LinkButton>
+                                    <%-- <a href="Client.aspx" ></a>--%>
+                                </li>
+                                <li runat="server" id="liclsearch">
+                                    <a href="ClientSearch.aspx"><i class="fa fa-user-plus"></i>Client Search</a>
+                                </li>
+                                <li runat="server" id="licreateclienttour">
+                                    <a href="CreateClientTour.aspx"><i class="fa fa-user-plus"></i>Create Client Tour    </a>
+                                </li>
+                                <li id="lisearchclienttour" runat="server">
+                                    <a href="ClientTours.aspx"><i class="fa fa-user-plus"></i>Search Client Tours   </a>
+                                </li>
+                                <li id="liaddmanualenquirer" runat="server">
+                                    <a href="AddManualEnquirer.aspx"><i class="fa fa-user-plus"></i>Add Manual Enquiry</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li runat="server" id="liaddtowninfo">
+                            <a href="javascript:;">
+                                <i class="fa fa-user-plus"></i>
+                                <span class="title">Town Info Pages </span>
+                                <span class="selected"></span>
+                                <span id="Span2" runat="server" class="arrow "></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li runat="server" id="li6">
+                                    <a href="AddTownInfo.aspx"><i class="fa fa-user-plus"></i>Add Info Page</a>
+                                </li>
+                                <li runat="server" id="li8">
+                                    <a href="ManageTownInfo.aspx"><i class="fa fa-user-plus"></i>Manage Info Pages</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li runat="server" id="lireports">
+                            <a href="javascript:;">
+                                <i class="fa fa-bell-o"></i>
+                                <span class="title">Reports </span>
+                                <span class="selected"></span>
+                                <span id="spreports" runat="server" class="arrow "></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li runat="server" id="liclienttourfeedback">
+                                    <a href="ReportClientTourMissingFeedback.aspx"><i class="fa fa-bell"></i>Client Tour Requiring feedback    </a>
+                                </li>
+                                <li id="lisalesperson" runat="server">
+                                    <a href="SalespersonTours.aspx"><i class="fa fa-bell"></i>Salesperson Tours   </a>
+                                </li>
+                                <li id="liAction" runat="server">
+                                    <a href="ActionAgenda.aspx"><i class="fa fa-bell"></i>Action Agenda   </a>
+                                </li>
+
+                                <li id="liActionAgendaUser" runat="server" visible="false">
+                                    <a href="ActionHistory.aspx"><i class="fa fa-bell"></i>Action Agenda</a>
+                                </li>
+
+                                <li id="linovideos" runat="server">
+                                    <a href="Novideos.aspx"><i class="fa fa-bell"></i>No Videos  </a>
+                                </li>
+                                <li id="li5" runat="server">
+                                    <a href="NoHistory.aspx"><i class="fa fa-bell"></i>Client With No History</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li runat="server" id="lichangepassword">
+                            <a href="Changepassword.aspx">
+                                <i class="fa fa-power-off"></i>
+                                <span class="title">Password</span>
+
+                            </a>
+
+                        </li>
+                        <li runat="server" id="licontroler" style="display: block">
+                            <a href="javascript:;">
+                                <i class="fa fa-user-plus"></i>
+                                <span class="title">Controller </span>
+                                <span class="selected"></span>
+                                <span id="sconroler" runat="server" class="arrow "></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li runat="server" id="lipropertytypes">
+                                    <a href="#"><i class="fa fa-user-plus"></i>Property Tables</a>
+                                    <ul class="sub-menu">
+                                        <li runat="server" id="lifeatures">
+                                            <a href="Features.aspx"><i class="fa fa-user-plus"></i>Features</a>
+                                        </li>
+
+                                        <li id="lilocation" runat="server">
+                                            <a href="Location.aspx"><i class="fa fa-user-plus"></i>Location</a>
+                                        </li>
+                                        <li id="lipropertypostcode" runat="server">
+                                            <a href="PropertyPostcode.aspx"><i class="fa fa-user-plus"></i>Postcode  </a>
+                                        </li>
+                                        <li id="lipropertypostcodelist" runat="server">
+                                            <a href="PropertyPostcodeList.aspx"><i class="fa fa-user-plus"></i>Postocode Coordinates</a>
+                                        </li>
+                                        <li id="lipropertystatus" runat="server">
+                                            <a href="PropertyStatus.aspx"><i class="fa fa-user-plus"></i>Status  </a>
+                                        </li>
+                                        <li id="litypes" runat="server">
+                                            <a href="PropertType.aspx"><i class="fa fa-user-plus"></i>Type  </a>
+                                        </li>
+                                        <li id="liviews" runat="server">
+                                            <a href="PropertyViews.aspx"><i class="fa fa-user-plus"></i>Views  </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li id="lisystable" runat="server">
+                                    <a href="#"><i class="fa fa-user-plus"></i>System Tables  </a>
+                                    <ul class="sub-menu">
+                                        <%--<li runat="server" id="liagents">
+                                            <a href="#"><i class="fa fa-user-plus"></i>Franchises   </a>
+                                            <ul class="sub-menu">
+                                                <li runat="server" id="liaddagent">
+                                                    <a href="AddFranchise.aspx"><i class="fa fa-user-plus"></i>
+                                                        <asp:Label ID="lbladdagent" runat="server" Text="Add Franchise"></asp:Label>
+                                                    </a>
+                                                </li>
+                                                <li runat="server" id="limanageagent">
+                                                    <a href="ManageFranchises.aspx"><i class="fa fa-user-plus"></i>Manage Franchises   </a>
+                                                </li>
+                                            </ul>
+                                        </li>--%>
+                                        <li id="librokers" runat="server">
+                                            <a href="#"><i class="fa fa-user-plus"></i>Brokers  </a>
+                                            <ul class="sub-menu">
+                                                <li runat="server" id="liaddbroker">
+                                                    <a href="AddBroker.aspx"><i class="fa fa-user-plus"></i>
+                                                        <asp:Label ID="lblAddBroker" runat="server" Text="Add Broker"></asp:Label>
+                                                    </a>
+                                                </li>
+                                                <li runat="server" id="limanagebroker">
+                                                    <a href="ManageBroker.aspx"><i class="fa fa-user-plus"></i>Manage Brokers   </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li id="liBuyers" runat="server">
+                                            <a href="#"><i class="fa fa-user-plus"></i>Buyers  </a>
+                                            <ul class="sub-menu">
+                                                <li runat="server" id="lisource">
+                                                    <a href="BuyerSource.aspx"><i class="fa fa-user-plus"></i>Source   </a>
+                                                </li>
+                                                <li runat="server" id="listatus">
+                                                    <a href="BuyerStatus.aspx"><i class="fa fa-user-plus"></i>Status   </a>
+                                                </li>
+						 <li runat="server" id="li11">
+                                                    <a href="ActionTypes.aspx"><i class="fa fa-user-plus"></i>Action Types   </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li runat="server" id="liCriterias">
+                                            <a href="Criterias.aspx"><i class="fa fa-user-plus"></i>Buyer Criterias</a>
+                                        </li>
+                                        <li id="licontacttype" runat="server">
+                                            <%-- <a href="#" ><i class="fa fa-user-plus"></i>Contact Type  </a>--%>
+                                        </li>
+                                        <li id="lidatabasestatus" runat="server">
+                                            <a href="DatabaseStatistics.aspx"><i class="fa fa-user-plus"></i>Database Status  </a>
+                                        </li>
+                                        <li id="lihistorytype" runat="server">
+                                            <a href="HistoryType.aspx"><i class="fa fa-user-plus"></i>History Types  </a>
+                                        </li>
+                                        <li id="lilanguage" runat="server">
+                                            <a href="Languages.aspx"><i class="fa fa-user-plus"></i>Language  </a>
+                                        </li>
+                                        <li id="lilawyers" runat="server">
+                                            <a href="#"><i class="fa fa-user-plus"></i>Lawyers  </a>
+                                            <ul class="sub-menu">
+                                                <li runat="server" id="liaddlawyer">
+                                                    <a href="Addlawyer.aspx"><i class="fa fa-user-plus"></i>
+                                                        <asp:Label ID="lblAddLawyer" runat="server" Text="Add Lawyer"></asp:Label>
+                                                    </a>
+                                                </li>
+                                                <li runat="server" id="limanagelawyer">
+                                                    <a href="Managelawyer.aspx"><i class="fa fa-user-plus"></i>Manage Lawyers   </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li id="li25" runat="server">
+                                            <%--         <a href="#"><i class="fa fa-user-plus"></i>Menu Editor  </a>--%>
+                                        </li>
+                                        <li id="liparnter" runat="server">
+                                            <a href="AddPartner.aspx"><i class="fa fa-user-plus"></i>PARTNER / FRANCHISEE</a>
+                                            <ul class="sub-menu">
+                                                <li runat="server" id="liFranchiseRequests">
+                                                    <a href="FranchiseRequests.aspx"><i class="fa fa-user-plus"></i>
+                                                        <asp:Label ID="lblFranchiseRequests" runat="server" Text="Franchise Requests"></asp:Label>
+                                                    </a>
+                                                </li>
+                                                <li runat="server" id="liaddpartner">
+                                                    <a href="AddPartner.aspx"><i class="fa fa-user-plus"></i>
+                                                        <asp:Label ID="lblAddParnter" runat="server" Text="Add Partner"></asp:Label>
+                                                    </a>
+                                                </li>
+                                                <li runat="server" id="limanagepartner">
+                                                    <a href="ManagePartner.aspx"><i class="fa fa-user-plus"></i>Manage Partners   </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li runat="server" id="liAgent">
+                                            <a href="javascript:;">
+                                                <i class="fa fa-user-plus"></i>
+                                                Agent
+                                            </a>
+                                            <ul class="sub-menu">
+                                                <li runat="server" id="liAddAgent">
+                                                    <a href="AddAgent.aspx"><i class="fa fa-user-plus"></i>
+                                                        <asp:Label ID="lblAddFranchise" runat="server" Text="Add Agent"></asp:Label>
+                                                    </a>
+                                                </li>
+                                                <li id="liManageAgents" runat="server">
+                                                    <a href="ManageAgents.aspx"><i class="fa fa-user-plus"></i>Manage Agents   </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li id="lipayments" runat="server">
+                                            <a href="PaymentType.aspx"><i class="fa fa-user-plus"></i>Payment Types  </a>
+                                        </li>
+                                        <li id="litestinomials" runat="server">
+                                            <a href="Testinomials.aspx"><i class="fa fa-user-plus"></i>Testimonials  </a>
+                                        </li>
+                                        <li id="litranslations" runat="server">
+                                            <a href="Translations.aspx"><i class="fa fa-user-plus"></i>Translations  </a>
+                                        </li>
+                                        <li id="liusers" runat="server">
+                                            <a href="#"><i class="fa fa-user-plus"></i>Users  </a>
+                                            <ul class="sub-menu">
+                                                <li runat="server" id="liadduser">
+                                                    <a href="AddUser.aspx"><i class="fa fa-user-plus"></i>
+                                                        <asp:Label ID="lblAddUser" runat="server" Text="Add User"></asp:Label>
+                                                    </a>
+                                                </li>
+                                                <li runat="server" id="limanageuser">
+                                                    <a href="ManageUser.aspx"><i class="fa fa-user-plus"></i>Manage Users</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li id="liReallocation" runat="server">
+                                            <a href="ReAllocation.aspx"><i class="fa fa-user-plus"></i>ReAllocation</a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+                                <li id="li16" runat="server">
+                                    <asp:LinkButton ID="lnkexport" runat="server" ForeColor="White" Text="Export" OnClick="lnkexport_Click"><i class="fa fa-user-plus"></i>Export</asp:LinkButton>
+
+                                </li>
+                                <li id="li1" runat="server">
+                                    <asp:LinkButton ID="lnkcsvexport" runat="server" ForeColor="White" Text="Export" OnClick="lnkcsvexport_Click"><i class="fa fa-user-plus"></i>Export Csv</asp:LinkButton>
+                                </li>
+                                <li>
+                                    <asp:LinkButton ID="lnkFeedLogs" runat="server" ForeColor="White" PostBackUrl="~/AdminNew/FeedLogs.aspx" Text="Feed Logs"><i class="fa fa-user-plus"></i>Feed Logs</asp:LinkButton>
+                                </li>
+                            </ul>
+                        </li>
+                        <li runat="server" id="lionlinemagazine" tyle="display:block">
+                            <a href="javascript:;">
+                                <i class="fa fa-user-plus"></i>
+                                <span class="title">Online Magazine </span>
+                                <span class="selected"></span>
+                                <span id="sponlinemagazine" runat="server" class="arrow "></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li runat="server" id="li3">
+                                    <a href="OnlineMagazineAddEdit.aspx"><i class="fa fa-user-plus"></i>
+                                        <asp:Label ID="Label1" runat="server" Text="Add OnlineMagazine"></asp:Label>
+                                    </a>
+                                </li>
+                                <li id="li4" runat="server">
+                                    <a href="OnlineMagazine.aspx"><i class="fa fa-user-plus"></i>Manage OnlineMagazine   </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li runat="server" id="liBlogs" tyle="display:block">
+                            <a href="javascript:;">
+                                <i class="fa fa-user-plus"></i>
+                                <span class="title">Blogs </span>
+                                <span class="selected"></span>
+                                <span id="spblog" runat="server" class="arrow "></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li runat="server" id="liaddblog">
+                                    <a href="AddBlog.aspx"><i class="fa fa-user-plus"></i>
+                                        <asp:Label ID="Label2" runat="server" Text="AddBlog"></asp:Label>
+                                    </a>
+                                </li>
+                                <li id="limanageblog" runat="server">
+                                    <a href="Blogs.aspx"><i class="fa fa-user-plus"></i>Manage Blogs   </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li runat="server" id="liBloggermain" tyle="display:block">
+                            <a href="javascript:;">
+                                <i class="fa fa-user-plus"></i>
+                                <span class="title">Blogger </span>
+                                <span class="selected"></span>
+                                <span id="spblogger" runat="server" class="arrow "></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li runat="server" id="liBlogger">
+                                    <a href="AddBlogger.aspx"><i class="fa fa-user-plus"></i>
+                                        <asp:Label ID="Label3" runat="server" Text="AddBlogger"></asp:Label>
+                                    </a>
+                                </li>
+                                <li id="liManageBlogger" runat="server">
+                                    <a href="ManageBlogger.aspx"><i class="fa fa-user-plus"></i>Manage Blogger   </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="logout.aspx">
+                                <i class="fa fa-power-off"></i>
+                                <span class="title">Log Out</span>
+
+                            </a>
+
+                        </li>
+                    </ul>
+                    <!-- END SIDEBAR MENU -->
+
+
+                    <ul class="page-sidebar-menu" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="display: block" runat="server" id="ulblogger">
+                        <!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
+                        <li class="sidebar-toggler-wrapper">
+                            <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+                            <div class="sidebar-toggler">
+                                <img src="images/toggle-img.jpg" alt="toggle" />
+                            </div>
+                            <!-- END SIDEBAR TOGGLER BUTTON -->
+                        </li>
+                        <!-- DOC: To remove the search box from the sidebar you just need to completely remove the below "sidebar-search-wrapper" LI element -->
+                        <li class="sidebar-search-wrapper">
+                            <!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
+                            <!-- DOC: Apply "sidebar-search-bordered" class the below search form to have bordered search box -->
+                            <!-- DOC: Apply "sidebar-search-bordered sidebar-search-solid" class the below search form to have bordered & solid search box -->
+                            <div class="logo-addg">
+                                <a href="Index.aspx">
+                                    <%--<img src="../images/admin-logo.png" alt="logo" />--%></a>
+                            </div>
+                            <!-- END RESPONSIVE QUICK SEARCH FORM -->
+                        </li>
+                        <li class="start" id="li7" runat="server">
+                            <a href="Index.aspx">
+                                <i class="fa fa-home"></i>
+                                <span class="title">Dashboard</span>
+                                <span class="selected"></span>
+                            </a>
+                        </li>
+
+                        <li runat="server" id="li2mainblog" tyle="display:block">
+                            <a href="javascript:;">
+                                <i class="fa fa-user-plus"></i>
+                                <span class="title">Blogs </span>
+                                <span class="selected"></span>
+                                <span id="spblogs" runat="server" class="arrow "></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li runat="server" id="li2addblogg">
+                                    <a href="AddBlog.aspx"><i class="fa fa-user-plus"></i>
+                                        <asp:Label ID="Label4" runat="server" Text="AddBlog"></asp:Label>
+                                    </a>
+                                </li>
+                                <li id="li2manageblogg" runat="server">
+                                    <a href="Blogs.aspx"><i class="fa fa-user-plus"></i>Manage Blogs   </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+
+
+                        <li>
+                            <a href="logout.aspx">
+                                <i class="fa fa-power-off"></i>
+                                <span class="title">Log Out</span>
+
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div style="display: none">
+                <asp:GridView ID="grdMarkettingLeads" DataKeyNames="property_id" Font-Names="Open Sans, sans-serif" CssClass="table-bordered table-striped table-condensed cf" TabIndex="0" runat="server" AutoGenerateColumns="false" Width="100%" EmptyDataText="No Record found!">
+                    <Columns>
+
+                        <asp:BoundField DataField="property_ref"
+                            HeaderText="REF" />
+                        <asp:BoundField DataField="type"
+                            HeaderText="TYPE" />
+                        <asp:BoundField DataField="location"
+                            HeaderText="LOCATION" />
+                        <asp:BoundField DataField="latitude"
+                            HeaderText="LATITUDE" />
+                        <asp:BoundField DataField="longitude"
+                            HeaderText="LONGITUDE" />
+                        <asp:BoundField DataField='Description'
+                            HeaderText="DESCRIPTION" />
+                        <asp:BoundField DataField="price"
+                            HeaderText="SALES PRICE" />
+
+
+                    </Columns>
+                </asp:GridView>
+            </div>
+
+            <!-- END SIDEBAR -->
+            <!-- BEGIN CONTENT -->
+            <div class="page-content-wrapper">
+                <div class="page-content">
+                    <!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+                    <div class="modal fade" id="portlet-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                                    <h4 class="modal-title">Modal title</h4>
+                                </div>
+                                <div class="modal-body">
+                                    Widget settings form goes here
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn blue">Save changes</button>
+                                    <button type="button" class="btn default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                            <!-- /.modal-content -->
+                        </div>
+                        <!-- /.modal-dialog -->
+                    </div>
+
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+
+                </div>
+
+                <!-- END PAGE HEADER-->
+                <!-- BEGIN PAGE CONTENT-->
+
+            </div>
+            <!-- END PAGE CONTENT-->
+        </div>
+
+        <!-- END CONTENT -->
+        <!-- BEGIN QUICK SIDEBAR -->
+
+        <!-- END QUICK SIDEBAR -->
+
+        <!-- END CONTAINER -->
+        <!-- BEGIN FOOTER -->
+        <div class="page-footer">
+            <div class="page-footer-inner">
+                Developed by <a href="http://hashsoftwares.com/" target="_blank" class="page">Hash Softwares</a>| © 2015 All Rights Are Reserved
+            </div>
+            <div class="scroll-to-top">
+                <i class="fa fa-arrow-up"></i>
+            </div>
+        </div>
+        <!-- END FOOTER -->
+    </form>
+    <script>
+
+        $(document).ready(function () {
+
+            // initiate layout and plugins
+            Metronic.init(); // init metronic core components
+            Layout.init(); // init current layout
+            QuickSidebar.init(); // init quick sidebar
+            Demo.init(); // init demo features
+            // button state demo  
+
+            $("#ContentPlaceHolder1_txtCreateDate").datepicker();
+            $("#ContentPlaceHolder1_txtSelectDate").datepicker();
+
+            $('.demo-loading-btn')
+                .click(function () {
+                    var btn = $(this)
+                    btn.button('loading')
+                    setTimeout(function () {
+                        btn.button('reset')
+                    }, 3000)
+                });
+        });
+    </script>
+    <iframe id="IFRAME1" src="KeepSessionAlive.aspx" width="0" height="0" runat="server"></iframe>
+    <script src="js/bootstrap.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://ajax.microsoft.com/ajax/jquery.ui/1.8.6/themes/smoothness/jquery-ui.css" />
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+</body>
+</html>

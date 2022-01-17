@@ -1,0 +1,894 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="OurService" xml:space="preserve">
+    <value>Our service area is truly comprehensive and covers a large section of inland Andalucia. If you have a desire to purchase a rural, inland property in a true Spanish area and are interested in any of the villages in and around Alcala la Real, Alora, Antequera, Archidona, Mollina, Fuente de Piedra, Campillos, Iznajar, Villanueva de Algaidas, Lucena, Loja, Osuna, Salinas, Alameda and all places in between, as well as the Subbetica National Park covering the regions of Antequera, Cádiz, Cordoba, Granada, Jaen, Málaga and Sevilla then &lt;a href="ContactOffices.aspx" title="come and see us"&gt;come and see us&lt;/a&gt;!</value>
+  </data>
+  <data name="pleasealso" xml:space="preserve">
+    <value>Please also remember, we are adding inland properties on a daily basis to our web site, there is nearly always something new!</value>
+  </data>
+  <data name="Specialist" xml:space="preserve">
+    <value>The inland Andalucia Property Specialist</value>
+  </data>
+  <data name="welcome" xml:space="preserve">
+    <value>Welcome to Inland Andalucia Ltd. We are the real property specialist for inland Andalucia. All locations and all property types: if it’s inland Andalucia, it’s us. Discover our very extensive and all-encompassing &lt;a href="PropSearch.aspx"&gt;inland property portfolio&lt;/a&gt;</value>
+  </data>
+  <data name="AdvancedSearch" xml:space="preserve">
+    <value>Advanced Search</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="PropertySearch" xml:space="preserve">
+    <value>Property Search</value>
+  </data>
+  <data name="SearchbyGooglemap" xml:space="preserve">
+    <value>Search by Google map</value>
+  </data>
+  <data name="Top50" xml:space="preserve">
+    <value>Top50</value>
+  </data>
+  <data name="AboutAndalucia" xml:space="preserve">
+    <value>About Andalucia</value>
+  </data>
+  <data name="AgentsPrivateArea" xml:space="preserve">
+    <value>Agents Private Area</value>
+  </data>
+  <data name="Airports" xml:space="preserve">
+    <value>Airports</value>
+  </data>
+  <data name="Articles" xml:space="preserve">
+    <value>Articles</value>
+  </data>
+  <data name="BuyersGuide" xml:space="preserve">
+    <value>Buyer's Guide</value>
+  </data>
+  <data name="BuyingaProperty" xml:space="preserve">
+    <value>Buying a Property</value>
+  </data>
+  <data name="BuyingProcess" xml:space="preserve">
+    <value>Buying Process</value>
+  </data>
+  <data name="Contactus" xml:space="preserve">
+    <value>Contact us</value>
+  </data>
+  <data name="Cordobaprovince" xml:space="preserve">
+    <value>Cordoba province</value>
+  </data>
+  <data name="FAQs" xml:space="preserve">
+    <value>FAQs</value>
+  </data>
+  <data name="FeaturedProperties" xml:space="preserve">
+    <value>Featured Properties</value>
+  </data>
+  <data name="Findallourpropertiesusing" xml:space="preserve">
+    <value>Find all our properties using</value>
+  </data>
+  <data name="Glossary" xml:space="preserve">
+    <value>Glossary</value>
+  </data>
+  <data name="GoogleMaps" xml:space="preserve">
+    <value>Google Maps</value>
+  </data>
+  <data name="GranadaProvince" xml:space="preserve">
+    <value>Granada Province</value>
+  </data>
+  <data name="Jaenprovince" xml:space="preserve">
+    <value>Jaen province</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="MalagaProvince" xml:space="preserve">
+    <value>Malaga Province</value>
+  </data>
+  <data name="Mortgage" xml:space="preserve">
+    <value>Mortgage</value>
+  </data>
+  <data name="Newsletter" xml:space="preserve">
+    <value>Newsletter</value>
+  </data>
+  <data name="OurOffices" xml:space="preserve">
+    <value>Our Offices</value>
+  </data>
+  <data name="PropertyTaxes" xml:space="preserve">
+    <value>Property Taxes</value>
+  </data>
+  <data name="QuickSearch" xml:space="preserve">
+    <value>Quick Search</value>
+  </data>
+  <data name="ReadwhatourVendorsandClientssay" xml:space="preserve">
+    <value>Read what our Vendors and Clients say</value>
+  </data>
+  <data name="SevilleProvince" xml:space="preserve">
+    <value>Seville Province</value>
+  </data>
+  <data name="TownGuide" xml:space="preserve">
+    <value>Town Guide</value>
+  </data>
+  <data name="UnpaidTaxes" xml:space="preserve">
+    <value>Unpaid Taxes</value>
+  </data>
+  <data name="UsefulLinks" xml:space="preserve">
+    <value>Useful Links</value>
+  </data>
+  <data name="ViewingTrip" xml:space="preserve">
+    <value>Viewing Trip</value>
+  </data>
+  <data name="Weather" xml:space="preserve">
+    <value>Weather</value>
+  </data>
+  <data name="YoureinSafeHands" xml:space="preserve">
+    <value>You 're in Safe Hands</value>
+  </data>
+  <data name="AndaluciaProperty" xml:space="preserve">
+    <value>Andalucia Property</value>
+  </data>
+  <data name="AndaluciaPropertydesc" xml:space="preserve">
+    <value>At Inland Andalucia we have country, rural, inland property ranging from fincas, villas, townhouses to apartments. We specialise in the areas of Antequera, Cordoba, Granada, Jaen, Malaga and Sevilla where, with us you will find your ideal inland property. If you do not find what you are looking for please &lt;a href="contactus.aspx"&gt;contact us &lt;/a&gt;, as we probably have it.</value>
+  </data>
+  <data name="Area" xml:space="preserve">
+    <value>Area:</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="btnSearch" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="Latest" xml:space="preserve">
+    <value>Latest</value>
+  </data>
+  <data name="MinBaths" xml:space="preserve">
+    <value>Min. Baths:</value>
+  </data>
+  <data name="MinBeds" xml:space="preserve">
+    <value>Min. Beds:</value>
+  </data>
+  <data name="NewSearch" xml:space="preserve">
+    <value>New Search</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>of</value>
+  </data>
+  <data name="Page" xml:space="preserve">
+    <value>Page</value>
+  </data>
+  <data name="Pricefrom" xml:space="preserve">
+    <value>Price from:</value>
+  </data>
+  <data name="propertiesfound" xml:space="preserve">
+    <value>properties found</value>
+  </data>
+  <data name="PropertiesinAndalucia" xml:space="preserve">
+    <value>Properties in Andalucia</value>
+  </data>
+  <data name="Propertysearchadvanced" xml:space="preserve">
+    <value>Property search (advanced)</value>
+  </data>
+  <data name="Propertysearchbyreference" xml:space="preserve">
+    <value>Property search by reference</value>
+  </data>
+  <data name="PropertyType" xml:space="preserve">
+    <value>PropertyType:</value>
+  </data>
+  <data name="Referencenumber" xml:space="preserve">
+    <value>Reference number</value>
+  </data>
+  <data name="SearchpropertiesinAndaluciabyGoogleMap" xml:space="preserve">
+    <value>Search properties in Andalucia by Google Map</value>
+  </data>
+  <data name="to" xml:space="preserve">
+    <value>to:</value>
+  </data>
+  <data name="To050descbelow" xml:space="preserve">
+    <value>At Inland Andalucia we have country, rural, inland property ranging from fincas, villas, townhouses to apartments. We specialise in the areas of Antequera, Cordoba, Granada, Jaen, Malaga and Sevilla where, with us you will find your ideal inland property. If you do not find what you are looking for please &lt;a href="contactus.aspx"&gt;contact us&lt;/a&gt;, as we probably have it.</value>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="Top50overview" xml:space="preserve">
+    <value>An overview of our 50 best bargain properties for sale in Cordoba, Granada, Jaen, Malaga and Sevilla</value>
+  </data>
+  <data name="Town" xml:space="preserve">
+    <value>Town:</value>
+  </data>
+  <data name="TownLocationInfoAndaluciaunique" xml:space="preserve">
+    <value>Andalucia is unique</value>
+  </data>
+  <data name="TownLocationInfoAreaaround" xml:space="preserve">
+    <value>The areas around the Montes of Malaga, Granada, Sierras of Cordoba, Subbetica and Cadiz offer wonderful mountains and incredible views but may not be practical for a retired couple or a young family. The corridor from Antequera to Sevilla is a vast plain and most of the villages in the area are flat making village life very comfortable with easy access to everything!</value>
+  </data>
+  <data name="TownLocationInfocompleteGuide" xml:space="preserve">
+    <value>Our complete guide for Andalucia</value>
+  </data>
+  <data name="TownLocationInfoCountless" xml:space="preserve">
+    <value>There are countless beautiful areas in which to buy your Spanish property, we focus on key areas around Alcala de Real, Antequera, Estepa and Marchena. The unrivalled natural beauty of the area, the friendliness of the local people, the facilities, amenities, the transportation infrastructure and the amazing value for money you get here makes it the perfect area to find your &lt;a href="#"&gt; Spanish Dream Home&lt;/a&gt;.</value>
+  </data>
+  <data name="TownLocationInfohunderedof" xml:space="preserve">
+    <value>With so many hundreds of white washed villages in Andalucia it's difficult to know which the right one for you. We always suggest that before you start looking for a home, you should spend some time looking for an area. Here in Spain you will spend considerably more time outdoors so it's essential that your environment and surroundings are comfortable. Buy the area first and then you're home!</value>
+  </data>
+  <data name="TownLocationInfosmallvillage" xml:space="preserve">
+    <value>The small villages in the Antequera, Estepa and Marchena area have all the amenities you'll need but you may need to ask around in the beginning as most shops are run from the ground floor of the proprietor's house and seldom have a sign! A larger town is always nearby for high street shopping and other services.</value>
+  </data>
+  <data name="ViewingTripAttheEnddesc" xml:space="preserve">
+    <value>At the end of your visit we will take you back to Malaga or Seville airport for your return flight.</value>
+  </data>
+  <data name="ViewingTripcollectsdesc" xml:space="preserve">
+    <value>We will then collect you from the airport and take you to your luxury B&amp;B accommodation. Available from 39 €/night in a double room with breakfast included.</value>
+  </data>
+  <data name="ViewingTripcomprehensivedesc" xml:space="preserve">
+    <value>We will provide you with a comprehensive buying guide. When you have found the perfect property we will assist you with the full process during and after your purchase.</value>
+  </data>
+  <data name="ViewingTripflightsdesc" xml:space="preserve">
+    <value>We or You organise your flights to either Malaga or Sevilla airport. Booking the flights at a time that suits your pocket.</value>
+  </data>
+  <data name="ViewingTripourteamdesc" xml:space="preserve">
+    <value>Our team will then take you out and about to view your selected properties and surrounding areas.</value>
+  </data>
+  <data name="ViewingTrippersonalisedservice" xml:space="preserve">
+    <value>Our personalised service on your property inspection visit includes...</value>
+  </data>
+  <data name="ViewingTripppriordesc" xml:space="preserve">
+    <value>Prior to arriving, work with our professional team selecting a portfolio of properties to view. This will include having your specific questions answered by email and or telephone.</value>
+  </data>
+  <data name="CordobaInfoAcross" xml:space="preserve">
+    <value>Across the river from the Mezquita is the Alcázar (or fortress) which was built by the Christians in 1328 as a defence against the Muslims. It offers a lovely respite from the summer heat as you wander through the tree shaded gardens and courtyards.</value>
+  </data>
+  <data name="CordobaInfoAsyoumind" xml:space="preserve">
+    <value>As you wind your way south there are some beautiful whitewashed villages where a friendly welcome can always be found... Puente Genil, Benamejí, Encinas Reales and, of course, Iznajar which is popular for the lake and its beach, and not forgetting La Subbetica natural park which was designated such in 1988 and is home to a miriad of birds, flowers and fauna.</value>
+  </data>
+  <data name="CordobaInfoCity" xml:space="preserve">
+    <value>As the city is divided, so is the province: The Sierra Morena in the north with its rugged pine and oak covered hills with a few steep villages set into them. The Campiña in the south which are the farmlands covered in wheat, vine and olive trees. The area is famous for its dry white wines, similar to sherry, which are produced from the Pedro Ximenez grape and olive oil, which is the other main produce from the region. This is why olive oil is an important ingredient of many typical dishes, Gazpacho and Salmorejo are cold soups made mainly of mashed vegetables and olive oil and are delicious and refreshing in the heat of the summer. Jamon, which is cured ham, Salchichon, a typical sausage, Caña de Lomo and Morcilla, black pudding are also widely enjoyed in the province. Some typical desserts are Alfajores, made of almonds and honey and Pestiños, which is fried in oil and then coverd with honey.</value>
+  </data>
+  <data name="CordobaInfoCordobaenjoys" xml:space="preserve">
+    <value>Cordoba enjoys its fiestas and festivals the same as every other town in Spain, and Semana Santa, or Easter week is one of the most important. There are no fewer than 32 processions in total with beautifully decorated and ornate pictures and figures of Saints accompanied by the Nazarenos (men dressed in typical gowns with hoods that cover all the face except the eyes). These processions pass through the town followed by crowds of people. In May there are three festivals; from 5th to 12th there is the Festival of the "Patios Cordobeses", a contest for the most beautifully decorated courtyard; the Cruces de Mayo is when the whole town is decorated with crosses and thousands of flowers; the last week in May is when everyone lets their hair down at the Feria de Cordoba - flamenco music and dance are enjoyed and the whole town revels in the festivities.</value>
+  </data>
+  <data name="CordobaInfodetailedInfo" xml:space="preserve">
+    <value>for detailed information of towns :</value>
+  </data>
+  <data name="CordobaInfoJewishQuarter" xml:space="preserve">
+    <value>The "Jewish Quarter" or old town, with its small plazas, patios full of colourful flowers and typical bars where tapas are enjoyed, is full of amazing architecture. The Mezquita (or mosque) attracts thousands of visitors each year who flock to admire the magnificent workmanship - it took two centuries to complete and is an amazing jungle of columns, recesses and arches with a church at its centre. Outside the mosque are the beautiful gardens, "the Patio de los Naranjos" and the "Calleja de la Flores".</value>
+  </data>
+  <data name="CordobaInfotownguide" xml:space="preserve">
+    <value>town guide</value>
+  </data>
+  <data name="CordobaInfoVisitour" xml:space="preserve">
+    <value>Visit our</value>
+  </data>
+  <data name="GranadaInfoanothertown" xml:space="preserve">
+    <value>Another town which was built as a defence on the western edge of the province is the beautiful town of Loja which spans the Genil river and is surrounding by olive groves and crops. You can still see the evidence of this stronghold today in the ruins of walls and the tower which was once part of the fortress.</value>
+  </data>
+  <data name="GranadaInfocityof" xml:space="preserve">
+    <value>The city of Granada was originally known as Ilbyr in prehistoric times when it was inhabited by native tribes and then when the Romans colonised southern Spain they built their own city and it was called Illibris. The present name of Granada came from the Arabs who invaded in the 8th century.</value>
+  </data>
+  <data name="GranadaInfodetailed" xml:space="preserve">
+    <value>for detailed information of towns located in Granada province:</value>
+  </data>
+  <data name="GranadaInfoheading" xml:space="preserve">
+    <value>Heading west from Granada are some lovely villages, usually at the top of hills where they were built as Moorish defences against the Christians. One of them, close to the Córdoba border, is the stunning town of Montefrio with one of its churches (Iglesia de la Villa) perched on top of a rocky pinnacle. The views from the church are magnificent and, although the church no longer holds services, you can visit the small museum inside and learn all about the church and the castle that stood in its place before its demolition in 1486.</value>
+  </data>
+  <data name="GranadaInfojustshort" xml:space="preserve">
+    <value>Just a short drive outside Loja, on the river, are several waterfalls which are now a designated protected area. The river is a popular place for fishermen who travel from all over southern Spain to try their hand at catching one of the massive trout that frequent the Rio Genil.</value>
+  </data>
+  <data name="GranadaInfoprovience" xml:space="preserve">
+    <value>GRANADA Province is situated in the eastern part of the autonomous region of Andalucia, is bordered by the provinces of Málaga, Córdoba, Jaén, Albacete, Murcia, Almería and stretches down to the Mediterranean sea. It's total area is 12,635km2 and contains 168 municipalities.</value>
+  </data>
+  <data name="GranadaInfoprovienceboasts" xml:space="preserve">
+    <value>Granada province boasts the tallest mountain in continental Spain, Mulhacén, at 3,481 metres as well as the Sierra Nevada mountain range (the most southerly ski resort in Europe). During the winter months, tourists flock to the Sierra Nevada for the skiing and mountain climbing, but Granada city is popular the year round for its Moorish architecture and the famous Alhambra, with its palaces and gardens. Not forgetting the cave dwellings dotted about the Sacromonte hill to the north of the city which was once the home of Granada's large gypsy community.</value>
+  </data>
+  <data name="GranadaInfothehill" xml:space="preserve">
+    <value>The hill facing the Alhambra is called the Albaicin and if you wind your way up through the narrow streets, past all the whitewashed houses, you will reach the highest point with amazing views of the Alhambra and the many differing landscapes of Granada province.</value>
+  </data>
+  <data name="GranadaInfotheserieaa" xml:space="preserve">
+    <value>The Sierra Nevada was designated a natural park in 1989 and a national park in 1998 and is shared by Granada and Almería provinces. The Alpujarras, the foothills of the Sierra Nevada, are well known for the distinctive Berber architecture of whitish grey box-shaped houses with flat clay roofs and the unique irrigation aqueducts that are still in use by local farmers. Located about 48 kilometres from Granada city, the area is very popular with walkers, hiking parties and campers - because of the melting snow from the mountains above, the landscape is very green, the wild flowers grow abundantly and the mountain goats roam freely.</value>
+  </data>
+  <data name="GranadaInfotownguide" xml:space="preserve">
+    <value>town guide</value>
+  </data>
+  <data name="GranadaInfotownitself" xml:space="preserve">
+    <value>The town itself is famous for its variety of Spanish sausages, chorizo, salchichón and morcilla (black pudding) which can be sampled in the many village bars.</value>
+  </data>
+  <data name="GranadaInfoVisitour" xml:space="preserve">
+    <value>Visit our</value>
+  </data>
+  <data name="GranadaInfowestgranada" xml:space="preserve">
+    <value>Inland Andalucia have some typically Spanish Properties for sale in west Granada...</value>
+  </data>
+  <data name="JaenInfocenterof" xml:space="preserve">
+    <value>The center of Jaen is determined by the hills of the Santa Catalina mountains, with steep and narrow streets. The city of Jaen is the administrative and industrial centre for the province of Jaen and include industrial establishments such as chemical works, tanneries, distilleries, cookies factories and textile factories.</value>
+  </data>
+  <data name="JaenInfocityof" xml:space="preserve">
+    <value>The city of Jaen is also known as the World Capital of Olive Oil, because it is one of Spain's biggest producer of the olive oil.</value>
+  </data>
+  <data name="JaenInfodetailed" xml:space="preserve">
+    <value>for detailed information of towns located in Jaen province:</value>
+  </data>
+  <data name="JaenInfojaencatherdal" xml:space="preserve">
+    <value>Jaen Cathedral is one of the most important Renaissance-style cathedrals of Andalucia. The construction of the cathedral began in 1570 and was completed in 1802. The cathedral was built to to shelter the relic of the Holy Face, or Veil of Veronica, lodged at the major chapel and exposed to the public every Friday.</value>
+  </data>
+  <data name="JaenInfoprovience" xml:space="preserve">
+    <value>JAEN Province is situated in the northern part of the autonomous region of Andalucia. It's total area is 424,30km2 with a population of 116.731 residents (2012).</value>
+  </data>
+  <data name="JaenInfosaintcastle" xml:space="preserve">
+    <value>Saint Catherine's Castle</value>
+  </data>
+  <data name="JaenInfosaintcastledesc" xml:space="preserve">
+    <value>Saint Catherine's Castle (Castillo de Santa Catalina) sits on the top of a hill overlooking the city of Jaen. Saint Catherines castle is sitting on a former fortress of Arabic origin of which some remains still exist. The current castle is of Christian origin, built in 1246 after the conquest of the city by Ferdinand III of Castile, also known as the Saint.</value>
+  </data>
+  <data name="JaenInfothecatherdal" xml:space="preserve">
+    <value>The Cathedral</value>
+  </data>
+  <data name="JaenInfotownguide" xml:space="preserve">
+    <value>town guide</value>
+  </data>
+  <data name="JaenInfoVisitour" xml:space="preserve">
+    <value>Visit our</value>
+  </data>
+  <data name="BackToTop" xml:space="preserve">
+    <value>Back to Top</value>
+  </data>
+  <data name="BuyerGuideFAQSfreqaskedqn" xml:space="preserve">
+    <value>FAQs: Frequently Asked Questions about Buying a house in Spain</value>
+  </data>
+  <data name="BuyerGuideFAQShowdogetnie" xml:space="preserve">
+    <value>How do I get a NIE?</value>
+  </data>
+  <data name="BuyerGuideFAQSintherory" xml:space="preserve">
+    <value>In theory it's easy. All you have to do is to go to the Extranjeros department of your nearest Policía Nacional station, fill in and sign an application form, and hand it in together with a recent passport sized photo. (N.B. When you get your photo done and if you wear glasses or earrings, take them off beforehand), a photocopy of your passport and your original passport. You must do this IN PERSON - you can't get anyone else to do it for you.</value>
+  </data>
+  <data name="BuyerGuideFAQSplusvalia" xml:space="preserve">
+    <value>What is the Plusvalía Tax in Spain?</value>
+  </data>
+  <data name="BuyerGuideFAQSplusvaliadesc" xml:space="preserve">
+    <value>The Plusvalía Tax is a tax set by the local authorities and based on the increase of the value of the land from the date the owner acquired the property to the time of the present sale. &lt;a href="BuyersGuideUnpaidTaxes.aspx" title="more»"&gt;more »&lt;/a&gt;</value>
+  </data>
+  <data name="BuyerGuideFAQSrecentspanish" xml:space="preserve">
+    <value>Recent Spanish legislation makes it compulsory for anyone selling or buying property in Spain to have a NIE - Número de Identidad de Extranjeros which, translated, means "Identity Number for Foreigners". People applying for a NIE used to get a plastic card which fitted neatly into any wallet or purse, but the modern NIE is actually just a piece of paper with your name and number and a official stamp so, as friend of Euroresidentes Angus Wallace suggests, "remember to make about 20 photocopies of the original and keep those for everyday use, it's surprising how quickly that very important piece of paper becomes a mini jigsaw after it has been folded umpteen times and stuck in your wallet".</value>
+  </data>
+  <data name="BuyerGuideFAQSunpaidbills" xml:space="preserve">
+    <value>How do Unpaid Bills and Taxes on a Property affect the New Owner?</value>
+  </data>
+  <data name="BuyerGuideFAQSunpaidbillsdesc" xml:space="preserve">
+    <value>Given the number of enquiries we are receiving regarding the legal implications of unpaid previous bills, invoices or mortgage installments on the property, we have done a short report showing how the new buyer would be affected in this scenario. Although we may sound repetitive, and certainly biased, take no chances and hire a Lawyer: a property purchase is possibly one of the most important decisions in life. &lt;a href="BuyersGuideUnpaidTaxes.aspx" title="more"&gt;more »&lt;/a&gt;</value>
+  </data>
+  <data name="BuyerGuideFAQSuntilrecently" xml:space="preserve">
+    <value>Until recently, foreign non-residents in Spain could buy or sell property without a NIE. Then, once it became necessary to have one, their legal representative could get one for them. But recent legislation passed in Spain has made it necessary for anyone paying money to the Spanish Inland Revenue (Hacienda) to have a Spanish identity number, and to obtain it in person.</value>
+  </data>
+  <data name="BuyerGuideFAQSwhatis" xml:space="preserve">
+    <value>What is a N.I.E.?</value>
+  </data>
+  <data name="BuyerGuideUnpaidTaxesbankwill" xml:space="preserve">
+    <value>The Bank will insist on payment and if it does not take place they will instruct their Lawyers to proceed with foreclosure of mortgage and sale of the property at public auction.</value>
+  </data>
+  <data name="BuyerGuideUnpaidTaxesBuyerhimself" xml:space="preserve">
+    <value>The buyer is himself liable to retain the mentioned percentage from the purchase price and lodge it with the Taxman. The property remains liable for non-payment of the tax retention. In fact, the non-payment of these monies could even be construed as criminal misappropriation, although the taxman will simply wait until the time limits expire and will set in motion the administrative procedure to eventually sell at auction. Although many Lawyers do not check that this tax has been paid in previous sales of the property, it is highly advisable as your property could have been purchased and sold between non-residents more than once, and therefore there is the possibility that tax is owed.</value>
+  </data>
+  <data name="BuyerGuideUnpaidTaxescommunityadmin" xml:space="preserve">
+    <value>The Community Administration decides to proceed against the new owner and if no action to pay up the outstanding debt is taken, the new owner will face the sale of his property at public auction following a court procedure. In addition to this, the new Horizontal Property Act has given increased powers to community administrators to pursue debtors, and the new Civil Procedural Act has new precepts which allow a quicker execution of debts and therefore, increased facilities for bidders in a judicial public auction scenario.</value>
+  </data>
+  <data name="BuyerGuideUnpaidTaxeselectricity" xml:space="preserve">
+    <value>Electricity: Supply will be cut off. (A fee may be charged to re-connect)</value>
+  </data>
+  <data name="BuyerGuideUnpaidTaxesgivenentry" xml:space="preserve">
+    <value>Given the number of enquiries we are receiving regarding the legal implications of unpaid previous bills, invoices or mortgage installments on the property, we have done a short report showing how the new buyer would be affected in this scenario. Although we may sound repetitive, and certainly biased, take no chances and hire a Lawyer: a property purchase is possibly one of the most important decisions in life.</value>
+  </data>
+  <data name="BuyerGuideUnpaidTaxesinprinciple" xml:space="preserve">
+    <value>In principle, the buyer can sign with the supply company a fresh new contract and remain unaffected by the debts. However, in practice the companies will put forward obstacles to this, and at times, it works out cheaper to pay the bills and ensure supply than litigating with the company, who will no doubt ensure no supply is available meanwhile.</value>
+  </data>
+  <data name="BuyerGuideUnpaidTaxesNoeffect" xml:space="preserve">
+    <value>No effect unless the vendor is non-resident in which case the property will remain liable for payment, with the same effects as on the IBI (council rate) non-payment. The Town Hall will initiate a legal procedure against the vendor, obliged to make payment, and once he is declared unable to make payment (either by being declared bankrupt or not answering the administrative claim), they will proceed against the buyer, and ultimately against his assets, namely the property.</value>
+  </data>
+  <data name="BuyerGuideUnpaidTaxesnoeffectsbuyer" xml:space="preserve">
+    <value>No effect on the new buyer.</value>
+  </data>
+  <data name="BuyerGuideUnpaidTaxesnotpaying" xml:space="preserve">
+    <value>Not paying these bills has no effect on the property. They are debts which go with the person who signed the contract, and therefore the seller will be liable. However, the following can happen if they have not been paid for:</value>
+  </data>
+  <data name="BuyerGuideUnpaidTaxesoffcource" xml:space="preserve">
+    <value>Of course, the Solicitor should have the checks done on this.</value>
+  </data>
+  <data name="BuyerGuideUnpaidTaxestelephone" xml:space="preserve">
+    <value>Telephone: Line will be interrupted.</value>
+  </data>
+  <data name="BuyerGuideUnpaidTaxesThisDebt" xml:space="preserve">
+    <value>This debt is construed as a preferential charge on the property, and it is known in Spanish as a 'tacit legal mortgage'. An administrative procedure follows a couple of unpaid bills (depending on the municipality) and if no action is taken the property is sold at auction. The new buyer is prevented from paying this tax if previous years have not been paid.</value>
+  </data>
+  <data name="BuyerGuideUnpaidTaxesunpaid" xml:space="preserve">
+    <value>Unpaid 'Plusvalía' (Tax on the increase of the value of land over the years)</value>
+  </data>
+  <data name="BuyerGuideUnpaidTaxesunpaid3" xml:space="preserve">
+    <value>Unpaid 3% retention of the purchase price to the tax office when the seller is non-resident</value>
+  </data>
+  <data name="BuyerGuideUnpaidTaxesUnpaidBills" xml:space="preserve">
+    <value>Unpaid Bills and Taxes on a Property</value>
+  </data>
+  <data name="BuyerGuideUnpaidTaxesunpaidcommunity" xml:space="preserve">
+    <value>Unpaid Community of Owners Charge</value>
+  </data>
+  <data name="BuyerGuideUnpaidTaxesUnpaidIBI" xml:space="preserve">
+    <value>Unpaid IBI (Council rate)</value>
+  </data>
+  <data name="BuyerGuideUnpaidTaxesUnpaidmortage" xml:space="preserve">
+    <value>Unpaid Mortgage Instalments</value>
+  </data>
+  <data name="BuyerGuideUnpaidTaxesunpaidseller" xml:space="preserve">
+    <value>Unpaid seller's capital gains tax</value>
+  </data>
+  <data name="BuyerGuideUnpaidTaxesunpaidservicebill" xml:space="preserve">
+    <value>Unpaid Service Bills</value>
+  </data>
+  <data name="BuyerGuideUnpaidTaxeswater" xml:space="preserve">
+    <value>Water: Supply will be cut off. (A fee may be charged to re-connect)</value>
+  </data>
+  <data name="BuyersGuideaswewll" xml:space="preserve">
+    <value>As well as giving legal advice at each stage of the process, your Lawyer will check the property registry to investigate any encumbrances or debts registered against the property. If anything untoward is discovered he will advise on how best to deal with it and whether you should, in fact, proceed at all. When completion takes place your Lawyer will lodge the title deed with the land registry and then take care of any remaining formalities such as opening accounts with local utility companies in your name and the payment of any transfer taxes.</value>
+  </data>
+  <data name="BuyersGuideBuyingproperty" xml:space="preserve">
+    <value>Buying a Property in Spain</value>
+  </data>
+  <data name="BuyersGuidehavealook" xml:space="preserve">
+    <value>Have a look at the related pages, it will help you while buying in Spain.</value>
+  </data>
+  <data name="BuyersGuideimpossible" xml:space="preserve">
+    <value>It is impossible to overstate the importance of appointing a qualified Lawyer to look after your interests when you are buying a property in Spain. When choosing a Lawyer, make sure that he or she fluently speaks and writes a language that you understand and don't hesitate to ask questions.</value>
+  </data>
+  <data name="BuyersGuideintend" xml:space="preserve">
+    <value>If you intend buying a property in Spain, whether this be an apartment or house on the coast, a flat in town, a plot of land or country estate, THE FIRST THING YOU SHOULD DO IS GO AND SEE A SOLICITOR.</value>
+  </data>
+  <data name="BuyersGuidespanish" xml:space="preserve">
+    <value>Spanish property law is complicated and there have been some cases of unwary investors being misled by unscrupulous sellers. The fact of the matter is that there is only one person who is entitled to sell you the property and that is the person who is named on the title deed. No matter how tempting the offer might be, never sign anything without the express agreement of a qualified, Spanish-speaking Lawyer.</value>
+  </data>
+  <data name="BuyersGuidewhattoexpect" xml:space="preserve">
+    <value>What to expect from your Spanish Solicitor</value>
+  </data>
+  <data name="BuyersprocessBuyingpropertyprocess" xml:space="preserve">
+    <value>Buying a property in spain, the buying process</value>
+  </data>
+  <data name="BuyersprocessBuyingpropertyprocessinspain" xml:space="preserve">
+    <value>This is the process for buying a property in Spain:</value>
+  </data>
+  <data name="Buyersprocesscompletion" xml:space="preserve">
+    <value>Completion</value>
+  </data>
+  <data name="Buyersprocesscompletiondesc" xml:space="preserve">
+    <value>On the assigned day of completion, the buyer and vendor (or their authorized representatives) will be present at the office of the notary to sign the Escritura de Compraventa (the title deed). The notary does not check any terms, but certifies that both parties have agreed to the terms stated, (the notary is in place to only witness both parties' signatures). At this stage the property becomes your possession, and your Lawyer is now required to fax details of the title deed to the local land registry confirming you as the new owner. Your Lawyer will also arrange payment of taxes and fees. It is advisable to make sure your property and contents are fully insured at this stage. Your Lawyer can undertake this for you or we can arrange this for you.</value>
+  </data>
+  <data name="Buyersprocesscostoccured" xml:space="preserve">
+    <value>Costs Incurred</value>
+  </data>
+  <data name="Buyersprocesscostoccureddesc" xml:space="preserve">
+    <value>There are three fees that are required to be paid; the Lawyer's fee, the notary fee and the property registry fees. You will always have to calculate approx. 10% on the top of the sales price to cover all your costs. Please note that this is only a brief guide on the steps taken when buying a Property in Spain. Of course, we understand you might have many more questions, so please do not hesitate to contact us. When buying property in Spain, first and foremost, it is essential to secure professional legal and financial advice before you invest in a property in Spain. Spanish property law is complicated and there have been some cases of unwary investors being misled by unscrupulous sellers. No matter how tempting the offer might be, never sign anything without the express agreement of a qualified, Spanish-speaking Lawyer.</value>
+  </data>
+  <data name="Buyersprocessexchange" xml:space="preserve">
+    <value>Exchange of the Private Purchase Contract - Re-Sale</value>
+  </data>
+  <data name="Buyersprocessexchangedesc" xml:space="preserve">
+    <value>After the initial reservation deposit has been paid, you have up to thirty days to exchange private purchase contract. This basically means that you will pay the remainder of the deposit required; this is usually a sum of 10% of the purchase price. This can be undertaken by your Lawyer, who can exchange contracts on your behalf, if you are unable to attend.</value>
+  </data>
+  <data name="Buyersprocessreservationdeposit" xml:space="preserve">
+    <value>Reservation Deposit</value>
+  </data>
+  <data name="Buyersprocessreservationdepositdesc" xml:space="preserve">
+    <value>Once you have found your ideal property, you reserve the property with a reservation deposit. This is usually between 3000€ - 6000€. You can either pay this by credit card, bank transfer, internet transfer or cash. Once you have paid the reservation deposit this guarantees that the property that you have chosen is taken off the market and is reserved for you at the agreed fixed price. At this stage you need to appoint a Lawyer who is fluent in Spanish, who can also speak your native language. Your Lawyer will explain the procedures involved with purchasing a property in Spain, as well as negotiating purchase terms with the vendor's Lawyer. It is normal at this stage to give power of attorney to your appointed Lawyer to act on your behalf. This will involve a visit to a public notary to sign over consent. At no time should power of attorney be given to the other party.</value>
+  </data>
+  <data name="MalegaInfobirthplace" xml:space="preserve">
+    <value>Malaga was the birthplace of both Pablo Picasso and more recently Antonio Banderas. The former was born in Plaza Merced and the house where he was born is now a museum telling the story of his life and works and is well worth visiting. Teatro Cervantes was a "springboard" for Antonio Banderas' career and he returns regularly to the City. Malagueños love their food and in the bars and restaurants the choice is endless, however a popular local dish is pescaito frito which is an assortment of fish, including red mullet, sardines and calamari.</value>
+  </data>
+  <data name="MalegaInfocarryingon" xml:space="preserve">
+    <value>Carrying on towards &lt;a href="AntequeraLocationInfo.aspx" title="Antequera"&gt;Antequera&lt;/a&gt; with its historic charm you pass some amazing limestone rock formations, rugged hills and grove upon grove of olive trees and if you deviate slightly you can sightsee in some picturesque villages: Villanueva de Trabuco and Archidona, or slightly further to the delightful &lt;a href="Fuente_de_PiedraLocationInfo.aspx" title="Fuente de Piedra"&gt;Fuente de Piedra&lt;/a&gt; where the famous lagoon is home to thousands of pink flamingos; &lt;a href="MollinaLocationInfo.aspx" title="Mollina "&gt;Mollina &lt;/a&gt;which is famous for its wines, &lt;a href="CampillosLocationInfo.aspx" title="Campillos"&gt;Campillos&lt;/a&gt;, Teba with deep gorge, &lt;a href="Villanueva_de_AlgaidasLocationInfo.aspx" title="Villanueva de Algaidas"&gt;Villanueva de Algaidas&lt;/a&gt; and &lt;a href="AlamedaLocationInfo.aspx" title="Alameda"&gt;Alameda&lt;/a&gt;.</value>
+  </data>
+  <data name="MalegaInfodetailed" xml:space="preserve">
+    <value>for detailed information of towns located in Malaga province:</value>
+  </data>
+  <data name="MalegaInfoifyouclicmb" xml:space="preserve">
+    <value>If you climb to the top of Mount Gibralfaro there are fantastic views of the old town with its large palate of colours and rooftops at every level. Situated on the hill is La Alcazaba, a fortress which dates back to 1065 and which is now a museum, and the castle of Gibralfaro, both with beautiful gardens to wander around.</value>
+  </data>
+  <data name="MalegaInfointheheart" xml:space="preserve">
+    <value>In the heart of the city are the delightful Alameda Gardens with some amazing palms and tropical plants and there are many more gardens surrounding the city. If you head inland towards Antequera in north Malaga province there are the massive Jardines de la Concepcion. These extensive tropical gardens, which date back to the 1850s, cover an area of 250,000 square metres with over 3000 plants from every corner of the world.</value>
+  </data>
+  <data name="MalegaInfomalegais" xml:space="preserve">
+    <value>Malaga, is one of the major cities in Andalucia and certainly the most important coastal one. With the cooling winds from the Mediterranean and the shelter of the Malaga mountains, the city has a relatively mild temperature all year and this makes it a popular place with both locals and tourists. Whether basking on the beaches or meandering through the narrow streets, soaking in all the magnificent Arab influenced Andalucian architecture or enjoying the city after dark there is no doubt that Malaga is a dynamic and appealing city.</value>
+  </data>
+  <data name="MalegaInfomountains" xml:space="preserve">
+    <value>The Malaga mountains, an area of 4762 hectares, were declared a National Park in 1989 and are home to more than 230 varieties of vegetation. The waters that run from the mountains feed the Guadalmedina river (or "river of the city") which is 47 kilometres long. Another river that has strong historic connections with Malaga is the River Guadalhorce and the "Guadalhorce Mudflats" which were formed from the river sediments. This 60 hectares was declared a Protected Natural Space in 1989. The river flows through a fertile valley of mainly citrus fruits before reaching the sea at Malaga</value>
+  </data>
+  <data name="MalegaInfotownguide" xml:space="preserve">
+    <value>town guide</value>
+  </data>
+  <data name="MalegaInfoVisitour" xml:space="preserve">
+    <value>Visit our</value>
+  </data>
+  <data name="PeriviousStep" xml:space="preserve">
+    <value>Previous Step</value>
+  </data>
+  <data name="Previousquestion" xml:space="preserve">
+    <value>Previous Question</value>
+  </data>
+  <data name="PropertyTaxesandprevious" xml:space="preserve">
+    <value>and previous</value>
+  </data>
+  <data name="PropertyTaxesbuying" xml:space="preserve">
+    <value>When buying a house in Spain it is important to estimate the taxes you will have to pay, not only when you actually purchase your Spanish property, but also local taxes and housing rates which are paid on a yearly basis by all home owners in Spain.</value>
+  </data>
+  <data name="PropertyTaxescapitlagains" xml:space="preserve">
+    <value>Capital Gains Tax (non-residents)</value>
+  </data>
+  <data name="PropertyTaxescorrectionfact" xml:space="preserve">
+    <value>The correction factor to be applied will be the following:</value>
+  </data>
+  <data name="PropertyTaxescorrectionfactor" xml:space="preserve">
+    <value>Correction Factor</value>
+  </data>
+  <data name="PropertyTaxeshyearofpurchase" xml:space="preserve">
+    <value>Year of purchase
+
+(or of exucation of works)</value>
+  </data>
+  <data name="PropertyTaxesIncreades" xml:space="preserve">
+    <value>&lt;strong&gt;Increased patrimony tax payable to Spanish Treasury:&lt;/strong&gt; When a property sale in Spain takes place, a capital gains tax must be paid by the seller. According to Spanish fiscal law, the buyer withholds 3% of the total purchase price to make sure that the seller does not take the money and run. This amount represents a capital gains tax on the profit made by the seller at the time of the sale. That is the difference between &lt;strong&gt;the current (official) sale price and the price paid by seller when he/she originally purchased the property + the value of any reforms and improvements carried out since then &lt;/strong&gt;(the seller must produce receipts as proof of improvements carried out).</value>
+  </data>
+  <data name="PropertyTaxesInspain" xml:space="preserve">
+    <value>Property Taxes In Spain</value>
+  </data>
+  <data name="PropertyTaxesnonresidents" xml:space="preserve">
+    <value>A non-resident seller is liable for payment of a 35% Capital Gains Tax on the profit of the sale of their property unless it was bought before January 1st 1987. However, there are exemptions available for those who have owned their property since 1994 and before. Also, the vendor can offset against the gain made on the sale other costs. A vendor will be able to mitigate his tax exposure by three different ways:</value>
+  </data>
+  <data name="PropertyTaxesReduction" xml:space="preserve">
+    <value>&lt;li&gt;Reductions on when the property was purchased. &lt;/li&gt;
+      &lt;li&gt;Those who bought a property after the 31st of December of 1994 will not be entitled to any reductions. &lt;/li&gt;
+      &lt;li&gt;Those who bought in 1987 of after will enjoy of a reduction of 11.11% on the net gain for every year they have owned the property before the 31st of December 1996 after taking the first two years. This means that a seller starts benefiting from this reduction, his first 11.11%, if he bought in 1994, 22.22% if he bought in 1993 and so on.&lt;/li&gt;
+      &lt;li&gt;Those who bought before the 31st of December 1986 will be pay not tax, as the cut-off point is 1996. &lt;/li&gt;</value>
+  </data>
+  <data name="PropertyTaxesReductioncostofpurchase" xml:space="preserve">
+    <value>&lt;li&gt;Costs of the purchase: these would include VAT of Transfer Tax, Plusvalía Tax (where paid by the buyer), Land registry and Notary fees, Lawyer's and real estate agent's fees, where applicable. &lt;/li&gt;
+      &lt;li&gt;Extensions and improvements done on the property. These should not be confused with maintenance and conservation costs, as these are not deductible. In practice, there is no clear cut distinction between one and the other.&lt;/li&gt;</value>
+  </data>
+  <data name="PropertyTaxesReductionexamples" xml:space="preserve">
+    <value>&lt;p&gt;Examples of not deductible costs are repair or maintenance works, such as painting, repairs on heating systems, lifts, plumbing and so on. Also, the installation of iron bars, doors, double glazing windows and similar works on the property. 
+      Examples of deductible costs are the installation of iron bars, doors, double glazing windows and similar improvements on the property.&lt;/p&gt;
+    &lt;p&gt; Please note also that &lt;strong&gt;you need a NIE&lt;/strong&gt; to pay this tax. Any seller who is over 65 and has been a legal resident in Spain for the last three years does not have to pay this tax. Residents and non-residents who purchased the property they are now selling before December 1986 are also exempt from the capital gains tax. &lt;/p&gt;
+    &lt;h3&gt;What is the Plusval&amp;iacute;a Tax in Spain?&lt;/h3&gt;
+    &lt;p&gt;The Plusval&amp;iacute;a Tax is a tax set by the local authorities and based on the increase of the value of the land from the date the owner acquired the property to the time of the present sale.&lt;/p&gt;
+    &lt;p&gt; The local authorities determine the amount of Plusval&amp;iacute;a to be paid for each house purchase in Spain, depending on the area where the property is located. The market value or sales price of the property does not have an effect on the Plusval&amp;iacute;a tax.      &lt;/p&gt;
+    &lt;p&gt;Normally, but not necessarily, the seller pays the Plusval&amp;iacute;a tax. However, this will depend on the sales agreement. The tax is calculated according to the rateable value of the property and the number of years it has been in the ownership of the vendor. &lt;/p&gt;
+    &lt;p&gt;&lt;a href="#top"&gt;back to top&lt;/a&gt;&lt;/p&gt;</value>
+  </data>
+  <data name="PropertyTaxesReductioninherits" xml:space="preserve">
+    <value>Reductions on the inherent costs of the purchase, works done on the property and others.</value>
+  </data>
+  <data name="PropertyTaxesReductionobtained" xml:space="preserve">
+    <value>This reduction is obtained by applying a percentage to the l purchase price, raising the original price to the level of the value of the peseta today. This inflationary correction factor is applied to the entire purchase price, as well as to all costs surrounding the purchase. Likewise, improvements and extensions on the property will have to be updated inflation-wise.</value>
+  </data>
+  <data name="PropertyTaxesReductiononinfla" xml:space="preserve">
+    <value>Reductions on the inflationary movements</value>
+  </data>
+  <data name="PropertyTaxesReSale" xml:space="preserve">
+    <value>&lt;strong&gt;Re-sale purchase tax&lt;/strong&gt;: House buyers of re-sale property (as opposed to brand new) are required to pay the Impuesto de Transferencia de Propiedad - Transfer Tax - which is now 8%</value>
+  </data>
+  <data name="PropertyTaxesspanishhousing" xml:space="preserve">
+    <value>Spanish housing yearly rates depend on the value of the house and the area it is in, but here is a rough guide to all the tax expenses you will need to take into account when deciding what house to buy</value>
+  </data>
+  <data name="PropertyTaxestaxpayable" xml:space="preserve">
+    <value>Taxes Payable at the Time of the Purchase</value>
+  </data>
+  <data name="PropertyTaxesthecapital" xml:space="preserve">
+    <value>The capital gains tax is payable to the Spanish Treasury (Tesoro Público). The estimated amount retained at the moment of the sale is payable once everything has been presented to the local registry and the new deeds are available. This means that property sellers not living in Spain will have to arrange for their Lawyer to see to the necessary paperwork and to formalise the tax payment about a month after the sale. If there is a very big difference between the price you are selling for and the price you originally paid, it might be worth applying for residency before you sell (nationals of EU member states are automatically granted residency, although the paperwork can be a bit tedious) in order to be eligible for the reduced percentage for residents.</value>
+  </data>
+  <data name="SevillaInfodetailed" xml:space="preserve">
+    <value>for detailed information of towns located in Seville province:</value>
+  </data>
+  <data name="SevillaInfoheadingeast" xml:space="preserve">
+    <value>Heading east from Seville the countryside is vast and dominated by cereal crops and olive groves, but there are some delightful towns dotted across the landscape.</value>
+  </data>
+  <data name="SevillaInfoinapril" xml:space="preserve">
+    <value>In April every year Seville hosts one of the largest parties in Spain, the "Feria de Abril" and people from all over Spain travel to take part in the festivities. The feria was originally just a cattle market, but through the years it has turned out to be one of the greatest popular festivals in Spain. It takes place just after the celebrations for Holy Week, Semana Santa, when some spectacular processions take place. There are over 1000 marquees, known as "casetas" at the feria site and every day at noon a procession called the "Paseo de Caballos" takes place. Girls in their traditional flamenco dresses are escorted through the city in carriages pulled by fine Spanish horses and in the late afternoon the bullfights begin and there is a terrific atmosphere of excitement and the whole city is buzzing!</value>
+  </data>
+  <data name="SevillaInfolacalle" xml:space="preserve">
+    <value>La Calle Feria is one of the longest streets in Seville and is steeped in history. Its also a popular place for shoppers, having a whole range of retailers and also a street market every Thursday where you can buy just about everything!! There is also a public market for fresh produce.</value>
+  </data>
+  <data name="SevillaInfothearcitechure" xml:space="preserve">
+    <value>The architecture in Seville is magnificent and reflects centuries of culture by the variety of people who left their mark; romans, jews, arabs and gypsies. Inscribed long ago on the Jerez Gate are the words "Hercules built me; Caesar surrounded me with walls and towers; the King Saint took me". Take a visit to the Barrio Santa Cruz with its narrow streets and whitewashed houses which is home to many monuments and was once the Jewish quarter but is now known as the fashionable part of the city. Seville is particularly famous for its many tapas bars where you can enjoy some good company and some excellent food, maybe washed down with some of the locally produced fine sherry wines. The cuisine is likely to include specialities such as gazpacho, fresh fish fried in olive oil, chickpea stew, cured cod fish and bull's tail. Also worth trying are the butter cookies called "mantecados" or the sweets made from egg-yolks called "Yemas de San Leandro".</value>
+  </data>
+  <data name="SevillaInfothecomerca" xml:space="preserve">
+    <value>The comarca de la Sierra Norte is the only natural park in Seville and lots of oak and cork trees grow here. In the centre of the park is a beautiful picnic area. Las Cascadas del Huéznar are a must for visitors; these waterfalls are spectacular and are well signposted from in the park.</value>
+  </data>
+  <data name="SevillaInfotheplaza" xml:space="preserve">
+    <value>The Plaza de España heading south from the city centre has a series of arches bearing crests of all the provinces of Spain and is surrounded by an artificial river, or the Parque de María Luisa which is open daily from dawn till dusk and is situated close to the plaza. Although situated in the centre of the city there are 400,000 m2 of woodland and two museums in the park.</value>
+  </data>
+  <data name="SevillaInfothepopular" xml:space="preserve">
+    <value>The popular capital of Andalucia, Seville, or Sevilla, is also the largest city in the province and the fourth largest in Spain; 40% of the province's population live here. It lies on the banks of the Guadalquivir river and is packed full of beautiful churches, monuments and the Cathedral which is the third largest Christian church in the world after St Peter's in Rome and St Paul's in London. If you climb to the top of La Giralda tower in the north-eastern corner of the cathedral you can experience breathtaking views of the city. Across the square from the cathedral is the Alcázar Palace which was the home of Spanish kings for nearly seven centuries. All of these landmarks help to make Seville one of the largest historical centres in Europe.</value>
+  </data>
+  <data name="SevillaInfotownguide" xml:space="preserve">
+    <value>town guide</value>
+  </data>
+  <data name="SevillaInfoVisitour" xml:space="preserve">
+    <value>Visit our</value>
+  </data>
+  <data name="AndaluciaAirportsdetailed" xml:space="preserve">
+    <value>Detailed Andalucia Location Map: Areas, Towns, Airports, Motorways, ...</value>
+  </data>
+  <data name="AndaluciaAirportsinformation" xml:space="preserve">
+    <value>Information on flights, car hire, airport transfers, services and facilities at Málaga Airport.</value>
+  </data>
+  <data name="AndaluciaAirportslistbelow" xml:space="preserve">
+    <value>Below is a list of our inland properties in Andalucia sorted by province and in alphabetical order:</value>
+  </data>
+  <data name="AndaluciaAirportsmoreat" xml:space="preserve">
+    <value>&amp; more at</value>
+  </data>
+  <data name="AndaluciaAirportstrack" xml:space="preserve">
+    <value>Track Flight Status</value>
+  </data>
+  <data name="BuyersGuideMortagebuyers" xml:space="preserve">
+    <value>Buyers with Spanish residence permit</value>
+  </data>
+  <data name="BuyersGuideMortagecopy" xml:space="preserve">
+    <value>&lt;li&gt;A copy of your passport&lt;/li&gt;
+            &lt;li&gt;Marital status, age, children etc. (married couples applying for a mortgage should provide information about both spouses)&lt;br&gt;
+            &lt;/li&gt;
+            &lt;li&gt;Your last three salary pay statements or pension vouchers&lt;/li&gt;
+            &lt;li&gt;The last tax declaration made in your home country (P-60)&lt;/li&gt;
+            &lt;li&gt;If you are an employer or are self-employed, a copy of your tax returns and annual accounts for the last two fiscal years&lt;/li&gt;
+            &lt;li&gt;Information about other properties owned fully or partly&lt;/li&gt;
+            &lt;li&gt;Details of the property you are planning to buy&lt;/li&gt;
+            &lt;li&gt;A brief description of current job situation, other incomes, investments, debts and other properties whether abroad or in Spain, etc.&lt;/li&gt;
+            &lt;li&gt;Information about any other sources of income&lt;/li&gt;</value>
+  </data>
+  <data name="BuyersGuideMortagecopy2" xml:space="preserve">
+    <value>&lt;li&gt;Copy of the residence permit&lt;/li&gt;
+            &lt;li&gt;Marital status, age, children etc. (married couples applying for a mortgage should provide information about both spouses)&lt;/li&gt;
+            &lt;li&gt;Your last three salary pay statements or pension vouchers&lt;/li&gt;
+            &lt;li&gt;Details of the property you are going to buy ("Nota Simple")&lt;/li&gt;
+            &lt;li&gt;Copy of your last tax declaration&lt;/li&gt;
+            &lt;li&gt;Photocopy of the last IBI bill&lt;/li&gt;
+            &lt;li&gt;Information about any other owned property&lt;/li&gt;
+            &lt;li&gt;Information about any other debts&lt;/li&gt;
+            &lt;li&gt;Information about any other sources of income&lt;br&gt;
+              Annual accounts for the last two fiscal years (if employer or self-employed)&lt;/li&gt;</value>
+  </data>
+  <data name="BuyersGuideMortagecopy3" xml:space="preserve">
+    <value>&lt;li&gt;Existing liabilities (existing loans or mortgages, monthly maintenance agreements...)&lt;/li&gt;
+      &lt;li&gt;Future liabilities including the proposed loan&lt;/li&gt;
+      &lt;li&gt;Present income and investments.&lt;/li&gt;</value>
+  </data>
+  <data name="BuyersGuideMortagedocument" xml:space="preserve">
+    <value>documents necessary to apply for a mortgage with a Spanish bank for residents and non-residents.</value>
+  </data>
+  <data name="BuyersGuideMortageiflegelresident" xml:space="preserve">
+    <value>If you are not a legal resident in this country, then you may be asked to provide an aval. This will be somebody usually based in Spain who agrees to pay in the event of you being unable to. You will also be required to have a NIE (Número de Identificación para Extranjeros) which is like an ID number everyone needs (residents and non-residents) in order to buy or sell property in Spain.</value>
+  </data>
+  <data name="BuyersGuideMortageInSpain" xml:space="preserve">
+    <value>Mortgages in Spain</value>
+  </data>
+  <data name="BuyersGuideMortageIntrsestRate" xml:space="preserve">
+    <value>Interest rates in Spain vary, but are generally now, higher than in the UK, and Spanish banks are not lending sufficiently and we see interest rates charged at above 6%, plus additional charges for set up costs, etc. You would be wise to shop around for the best deal.</value>
+  </data>
+  <data name="BuyersGuideMortageliabilities" xml:space="preserve">
+    <value>Liabilities should not exceed 35% of your net monthly income. Banks use the following variables to determine your ability to pay off the mortgage:</value>
+  </data>
+  <data name="BuyersGuideMortageManyguide" xml:space="preserve">
+    <value>Many guides about buying property in Spain assume that potential buyers actually have the money available, but if you are considering buying a house in Spain because you live and work here, or because you simply want to invest in real estate in Spain, you may want to consider taking out a mortgage with a Spanish Bank. Whether you want to buy a finca in Spain, a holiday apartment or a new home in Spain, taking out a Spanish mortgage may be the right solution for you.</value>
+  </data>
+  <data name="BuyersGuideMortagemostspanish" xml:space="preserve">
+    <value>Most Spanish banks currently offer mortgages of 60-70% property price over 5, 10, 15 or 20 years depending on whether you are a resident here or not. The current variable rate is about 6% and there is usually an early write-off fee of around 1.5%.</value>
+  </data>
+  <data name="BuyersGuideMortageNonResident" xml:space="preserve">
+    <value>Non-resident buyers</value>
+  </data>
+  <data name="BuyersGuideMortageYouWill" xml:space="preserve">
+    <value>You will be expected to prove ability to pay (i.e. wage slips from the last 3 months and bank statements of the last 6 months or, if you are self-employed, copies of your last 3 years accounts (with an auditor's stamp) and copies of you last 12 month's business bank statements and your last 6 months personal bank statements). Proof of payment based on your ability to pay with income received from renting the property will not be taken into account by Spanish banks. See our full list</value>
+  </data>
+  <data name="InlandAndaluciaandalucia" xml:space="preserve">
+    <value>Andalucia</value>
+  </data>
+  <data name="InlandAndaluciabutitsnot" xml:space="preserve">
+    <value>But it's not all olives, far from it. The centrepiece of the area is its Natural Park, the Sierras Subbética, some 31,000 hectares of medium-height limestone mountains which extend through much of the region, their steep slopes and rugged crags overlooking pretty, narrow valleys. Although not especially high, it does boast Córdoba's highest peak, La Tiñosa at 1,570 metres. The beautiful olive trees cover the vast landscapes in Andalucia. Why not buy your own finca with olive trees?</value>
+  </data>
+  <data name="InlandAndaluciacompletelist" xml:space="preserve">
+    <value>Here is a complete list of all the areas we sell properties in. So if you are looking for houses, fincas, cortijo's, village houses, cottages, farmhouses, luxury Spanish villas and house plots, cheap old Spanish ruins where you can create your Spanish dream home, discover our delightful properties for sale here.</value>
+  </data>
+  <data name="InlandAndaluciaheartland" xml:space="preserve">
+    <value>The heartland of Andalucía couldn't be described as such without an olive tree or two. Here there are a few more than that! It's a thrilling vista, row upon row, dotted on hillside upon hillside, stretching as far as the eye can see.</value>
+  </data>
+  <data name="InlandAndalucialandrugged" xml:space="preserve">
+    <value>This land of rugged hills and deep valleys offers the perfect base for your home. Not only does the spectacular scenery work wonders - just looking at this beauty is de-stressing.</value>
+  </data>
+  <data name="InlandAndalucialasubbetica" xml:space="preserve">
+    <value>La Subbética de Córdoba lies in the very centre of Andalucía, almost equidistant from its major towns, Córdoba itself, Granada, Sevilla and Málaga. Within an hour from here you can be in any one of these great cities.</value>
+  </data>
+  <data name="InlandAndaluciaregion" xml:space="preserve">
+    <value>Andalucía is the region of Spain that attracts most tourism. Its good weather and unique history make it a perfect destination for short or long visits alike. Andalucía is composed of eight provinces:</value>
+  </data>
+  <data name="InlandAndaluciathesesierras" xml:space="preserve">
+    <value>These sierras are a joy to behold, and well worth the trouble of getting out of the car and exploring on foot. Forested with oaks and maples, they are home to wild cats and boar, foxes and hedgehogs - not to mention the Cabrera shrew. Eagles, falcons, vultures and kestrels circle the skies high above; cuckoos, partridges, owls and swifts compete for the lower air space. Butterflies flutter through a pastoral scene of pure delight. It's not without interest underground, either, with some wonderful cave formations, the work of rivers flowing through the limestone fissures.</value>
+  </data>
+  <data name="InlandAndaluciawithclimate" xml:space="preserve">
+    <value>With a climate which is typically Andalusian which is hot in summer, mild in spring and autumn, a little chilly in the depths of winter, inland Andalucia, including La Subbética de Córdoba, offers so much to the visitor: authentic Andaluz lifestyle, a rich cultural tapestry, beautiful countryside, attractive towns and villages - and an easy journey to each and every one of Andalucía's great historic cities as well as Malaga's airport, which is only an hour away from most of the towns we cover.</value>
+  </data>
+  <data name="LocationMapInlandautonomous" xml:space="preserve">
+    <value>The autonomous region of Andalucia lies in the the south of Spain, and its coasts are bathed by both the Mediterranean and Atlantic oceans.</value>
+  </data>
+  <data name="LocationMapInlandborders" xml:space="preserve">
+    <value>It borders Extremadura and Castile-La Mancha in the north, Murcia and the Mediterranean Sea in the east, the Mediterranean and Atlantic ocean in the south, and Portugal in the west. The region's scenery stands out because of its sheer diversity. Some areas are covered in mountains while others are full of plains. There are three distinct geographical structures: the sierra Morena to the north, the Guadalquivir river and Betica depression in the central part of the region, and the Betica mountain ranges in the south.</value>
+  </data>
+  <data name="LocationMapInlandmostnotable" xml:space="preserve">
+    <value>The two most notable mountainous areas are the sub-Betica range, containing La Sagra massif that reaches an altitude of 2,383 metres and the Penibetica mountain range. The Sierra Nevada is also outstanding and is home to el Mulhacen, the highest mountain peak on the Iberian Peninsula reaching a height of 3,481 metres. Next comes Veleta peak at 3,392 metres. Andalucian rivers that lead into the Mediterranean sea are relatively short and contain small amounts of water. Amongst these are the Almanzora, the Almeria, the Adra, the Guadalfeo, the Guadalhore and the Guadiaro. The rivers that flow into the Atlantic are bigger and have more copious waters. The region's most important river is the Guadalquivir and its tributaries: the Guadalimar, the Guadiana Menor and the Genil. The Guadiana, the Odiel and the Tinto rivers also flow into the Atlantic.</value>
+  </data>
+  <data name="LocationMapInlandvaststrech" xml:space="preserve">
+    <value>The vast stretch of coast that extends along Andalucia is filled with bays and inlets, some a little more craggy than others as we near the Betica mountain ranges. The most notable geographical quirks that are found along the coast include: the steep rock summit of Farallon, Polacra point, Gata cape, the gulf of Almeria, las Entinas point, Adra bay, Sacratif bay, Malaga bay and Calaburras point. Europa Point forms the Gibraltar headland. This is where the Spanish coast begins stretching from the straits of Gibraltar up to the cape of Trafalgar. Within the straits the most notable parts of the landscape are formed by Algeciras bay as well as by Marroqui (Moroccan) and Tarifa points.</value>
+  </data>
+  <data name="Weatherbelowlist" xml:space="preserve">
+    <value>Below is a list of our inland properties in Andalucia sorted by province and in alphabetical order:</value>
+  </data>
+  <data name="Weathercheckforecast" xml:space="preserve">
+    <value>Check the Weather Forecast in any region of Andalucia by clicking the Map</value>
+  </data>
+  <data name="Weatherchecktown" xml:space="preserve">
+    <value>Or check it on differents towns of each region in Andalucia</value>
+  </data>
+  <data name="Weatherclickhere" xml:space="preserve">
+    <value>Click here to see a Location Map</value>
+  </data>
+  <data name="ContactUsaddress" xml:space="preserve">
+    <value>Address:</value>
+  </data>
+  <data name="ContactUscomments" xml:space="preserve">
+    <value>Comment:</value>
+  </data>
+  <data name="ContactUscontactsoon" xml:space="preserve">
+    <value>and we will contact you as soon as possible.</value>
+  </data>
+  <data name="ContactUsemail" xml:space="preserve">
+    <value>Email:</value>
+  </data>
+  <data name="ContactUsfname" xml:space="preserve">
+    <value>First Name:</value>
+  </data>
+  <data name="ContactUsheadoffice" xml:space="preserve">
+    <value>or by</value>
+  </data>
+  <data name="ContactUslastname" xml:space="preserve">
+    <value>Last Name:</value>
+  </data>
+  <data name="ContactUsmandatoryfield" xml:space="preserve">
+    <value>Mandatory fields</value>
+  </data>
+  <data name="ContactUspleasefillat" xml:space="preserve">
+    <value>Head Office in Spain +34 952 741 525</value>
+  </data>
+  <data name="ContactUspleasefillbelow" xml:space="preserve">
+    <value>Please fill in the form below to contact us at</value>
+  </data>
+  <data name="ContactUsscan" xml:space="preserve">
+    <value>Scan the below QR-code with your mobile to autosave our contact details</value>
+  </data>
+  <data name="ContactUstelephone" xml:space="preserve">
+    <value>Telephone:</value>
+  </data>
+  <data name="ContactUswepride" xml:space="preserve">
+    <value>We pride ourselves in personalised and good service, trying to give you as much help as possible. As we always want you to have the individual attention you need, please try to reserve an appointment with us before you leave your home, that way we can be ready and available for you personally at a pre-arranged time and date that suits you.</value>
+  </data>
+  <data name="ContactUswhateveryour" xml:space="preserve">
+    <value>Whatever your query, we are happy to help you.</value>
+  </data>
+  <data name="ReserveForViewing" xml:space="preserve">
+    <value>Reserve For Viewing Resource02</value>
+  </data>
+</root>

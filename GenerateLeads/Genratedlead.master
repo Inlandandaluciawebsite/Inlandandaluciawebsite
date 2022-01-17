@@ -1,0 +1,144 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Genratedlead.master.cs" Inherits="excelfiles_Genratedlead" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title>
+	Administration
+</title>
+
+ <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+     <link href="../CSS/admin.css" rel="stylesheet" type="text/css" />
+    <link href="gencss.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+        
+    </asp:ContentPlaceHolder>
+  
+     <script lang="ja" type="text/ecmascript">
+         function SetProgressPosition(e) {
+           //  alert();
+             var posx = 0;
+             var posy = 0;
+             if (!e) var e = window.event;
+             if (e.pageX || e.pageY) {
+                 posx = e.pageX;
+                 posy = e.pageY;
+             }
+             else if (e.clientX || e.clientY) {
+                 posx = e.clientX + document.documentElement.scrollLeft;
+                 posy = e.clientY + document.documentElement.scrollTop;
+             }
+             document.getElementById('divProgress').style.left = posx - 8 + "px";
+             document.getElementById('divProgress').style.top = posy - 8 + "px";
+         }
+    </script>
+
+     <style type="text/css">
+        .overlay {
+            border: black 1px solid;
+            padding: 5px;
+            z-index: 100;
+            width: 80px;
+            position: absolute;
+            background-color: #fff;
+            -moz-opacity: 0.75;
+            opacity: 0.75;
+            filter: alpha(opacity=75);
+            font-family: Tahoma;
+            font-size: 11px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .btn.blue:not(.btn-outline) {
+    background-color: #2d3091;
+    border-color: #3598dc;
+    color: #fff;
+    text-decoration: none;
+}
+        
+         .btn.yellow:not(.btn-outline) {
+    background-color: #FFFF61;
+    border-color: #3598dc;
+    color: #2D3091;
+    text-decoration: none;
+}
+        .sale-summary ul {
+    margin-top: -10px;
+}
+.list-inline, .list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+
+
+    </style>
+   
+</head>
+<body class="twoColFixRtHdr" onmousemove="SetProgressPosition(event)">
+
+      <div id="container">    
+             <form id="formBackOffice" runat="server">
+            <asp:ScriptManager ID="smDownTrade" runat="server"></asp:ScriptManager>
+       
+             <div id="header">
+                    <img id="ImageHeader" alt="Header" src="http://www.inlandandalucia.com/Images/Admin/header.jpg" />
+                </div>
+
+                     <div class="topnavwrap">
+                    <div class="topnav">
+                        <div class="nav">
+                            <div id="UpdatePanelNavigation">
+	
+                                    <ul><li></li>
+                                        <li>
+                                           <a id="lidata" href="#">Data</a>
+                                            <ul>
+                                                <li> <a id="liLast5DaysData" href="list.aspx">Last 5 Days Data</a></li>
+                                                <li>
+                                                <a id="ligenleads" href="lead.aspx">Generated Leads</a></li>
+                                           </ul></li>
+                                      </ul> 
+</div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="wrap">
+                    <div class="center">
+                        <div id="mainContent">
+                               <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>  
+
+
+                            <div id="UpdatePanelOptions">
+	
+                                    <table id="TableOptions">
+		<tr>
+			<td>
+                                              <div id="result"></div>
+                                                </td><td></td><td>
+                                                    
+                                                    <asp:ImageButton ID="btn" runat="server" src="../images/buttons/sign-out.gif"  class="agentloginbutton"  OnClick="ImageButtonSignOut_Click" />
+                                                  
+                                                  </td>
+		</tr>
+	</table>
+                                
+</div>
+                             <div class="clearfloat"></div>
+                        </div>
+                        <div id="footer">All rights reserved Inland Andalucia Ltd</div>
+                    </div>
+                </div>
+            </form>
+        </div>
+   
+</body>
+       <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</html>

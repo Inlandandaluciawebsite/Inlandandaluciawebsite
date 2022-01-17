@@ -1,0 +1,38 @@
+﻿<%@ Control Language="VB" AutoEventWireup="false" CodeFile="WebUserControlAdminPropertyHistory.ascx.vb" Inherits="WebUserControlAdminPropertyHistory" %>
+<p><strong><asp:Label ID="LabelPropertyHistory" runat="server" Text="History"></asp:Label></strong></p>
+<asp:UpdatePanel ID="UpdatePanelHistory" runat="server">
+    <ContentTemplate>
+        <asp:Table ID="TableHistory" runat="server">
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:GridView 
+                        ID="GridViewList" 
+                        runat="server" 
+                        Width="100%" 
+                        GridLines="None"
+                        AllowPaging="True"
+                        CssClass="mGrid"
+                        PagerStyle-CssClass="pgr"  
+                        AlternatingRowStyle-CssClass="alt"
+                        AutoGenerateSelectButton="true">
+                    </asp:GridView>
+                </asp:TableCell>                
+            </asp:TableRow>
+            <asp:TableRow ID="History" runat="server" Visible="false">
+                <asp:TableCell>
+                    <asp:TextBox ID="TextBoxHistory" runat="server" TextMode="MultiLine" Width="500px" Height="250px" Enabled="false"></asp:TextBox>            
+                </asp:TableCell>        
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:TextBox ID="TextBoxAddHistory" runat="server" MaxLength="2000" TextMode="MultiLine" Width="500px" Height="250px" AutoPostBack="true" ></asp:TextBox>            
+                </asp:TableCell>        
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:DropDownList ID="DropDownListType" runat="server"></asp:DropDownList>
+                </asp:TableCell>
+            </asp:TableRow>
+        </asp:Table>
+    </ContentTemplate> 
+</asp:UpdatePanel>

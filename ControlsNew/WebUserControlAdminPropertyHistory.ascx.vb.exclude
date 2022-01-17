@@ -1,0 +1,99 @@
+﻿Imports System.Data
+
+Partial Class WebUserControlAdminPropertyHistory
+    Inherits System.Web.UI.UserControl
+
+    Public Event Dirty()
+
+    Public Sub LoadHistory()
+
+        ' If we have a Session Value for the Property Reference
+        If Not Session("PropertyAdminPropertyReference") Is Nothing Then
+
+            ' Local Vars
+            Dim CDataAccess As New ClassDataAccess
+            'Dim CUtilities As New ClassUtilities
+
+            '' Enable Controls
+            'CUtilities.EnableControls(UpdatePanelHistory.ContentTemplateContainer.Controls, bEnabled)
+
+            '' Tidy
+            'CUtilities = Nothing
+
+            ' Load up Previous History
+            GridViewList.DataSource = CDataAccess.PropertyHistoryAbbrev(CDataAccess.PropertyIARef(Convert.ToInt32(Session("ContactPartnerID")), Session("PropertyAdminPropertyReference")), 75)
+            GridViewList.DataBind()
+
+            ' Hide the ID
+            If Not GridViewList.HeaderRow Is Nothing Then
+                GridViewList.HeaderRow.Cells(1).Visible = False
+                For Each gvr As GridViewRow In GridViewList.Rows
+                    gvr.Cells(1).Visible = False
+                Next
+            End If
+
+            ' Tidy
+            CDataAccess = Nothing
+
+            ' Clear Add Notes
+            TextBoxAddHistory.Text = String.Empty
+
+        End If
+
+    End Sub
+
+    Protected Sub Page_Init(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Init
+
+        ' Init History Types
+        Dim CDataAccess As New ClassDataAccess
+        DropDownListType.DataSource = CDataAccess.PropertyHistoryTypes
+        CDataAccess = Nothing
+        DropDownListType.DataBind()
+
+        ' Add None
+        DropDownListType.Items.Insert(0, "--- Select ---")
+
+        ' Load Notes
+        LoadHistory()
+
+    End Sub
+
+    Protected Sub GridViewList_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles GridViewList.SelectedIndexChanged
+
+        ' Local Vars
+        Dim CDataAccess As New ClassDataAccess
+        Dim dvRow As GridViewRow = GridViewList.SelectedRow
+
+        ' Load the History
+        TextBoxHistory.Text = CDataAccess.PropertyHistory(Convert.ToInt32(dvRow.Cells(1).Text))
+
+        ' Make the Note Visible
+        TableHistory.FindControl("History").Visible = True
+
+        ' Tidy
+        CDataAccess = Nothing
+
+    End Sub
+
+    Public Function PopulateSaveData(ByRef CProperty As ClassProperty) As Boolean
+
+        Try
+
+            ' Assign New Note
+            CProperty.History = TextBoxAddHistory.Text.Trim
+
+            Return False
+
+        Catch ex As Exception
+            Return True
+        End Try
+
+    End Function
+
+    Protected Sub TextBoxAddHistory_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles TextBoxAddHistory.TextChanged
+
+        ' Mark the Property as Dirty
+        RaiseEvent Dirty()
+
+    End Sub
+End Class

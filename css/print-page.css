@@ -1,0 +1,83 @@
+﻿@charset "utf-8";
+
+/* CSS Document */
+
+ body { margin:0px;}
+ .print-outer { width:99%; float:left; background:#fff; padding:0px 10px;}
+ .print-btn-bg { width:100%; float:left;}
+ .print-btn { background:#2D3091; color:#fff;}
+ .print-header { width:100%; float:left; margin-top:20px;}
+ .header-rt { width:100%; float:left; background:#fed103; padding:5px; text-align:right;}
+ 
+ .header-rt h3 {
+  font-family: 'Dancing Script', cursive;
+  color: #2D3091;
+  font-size: 45px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+ 
+ .header-rt h4 { font-size:22px; color:#fff; font-weight:bold;  }
+ .header-rt p { font-size:18px; color:#2D3091; font-weight:bold;  }
+ 
+ 
+ .price-outer-prt { width:100%; float: left;}
+ .price-outer-prt p b { font-size:18px;} 
+.price-outer-prt h5 { font-weight:bold; font-size:18px;}
+
+.print-prev-img { width:98%; margin:0 auto;}
+.print-detail-1 { width:100%; float:left; margin:10px 0;}
+
+.print-p-detail { width:100%; float:left;}
+.print-p-detail img { margin-right:10px;}
+.featured-carat { width:100%; float:left;}
+
+.prnttop {
+    margin-top:10px;
+}
+.prntbtm {
+    margin-bottom:10px;
+}
+
+@media (min-width: 768px) {
+.container-2 {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
+ .container-2 {
+    width: 600px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container-2 {
+    width: 900px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-2 {
+    width: 980px;
+  }
+}
+
+
+
+@media screen and (min-width:320px) and (max-width:766px) {
+	.print-outer { width:98%;}
+	.header-rt h3 { font-size:32px;}
+	 }             
+@media screen and (min-width:1200px)  { 
+.container-2 { width: 980px; margin:0 auto;}  
+	 }
+.img-01 {
+    width:100%
+}  
+/*@media screen and (min-width:320px) and (max-width:850px) {
+    .print-btn-bg {
+        display: none!important;
+    }
+}*/

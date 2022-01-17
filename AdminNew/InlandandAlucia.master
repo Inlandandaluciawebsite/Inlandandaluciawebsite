@@ -1,0 +1,549 @@
+﻿<%@ Master Language="VB" CodeFile="InlandandAlucia.master.vb" Inherits="InlandandAlucia" %>
+
+<%@ Register Src="~/Controls/WebUserControlQuickSearch.ascx" TagPrefix="uc1" TagName="WebUserControlQuickSearch" %>
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Inland</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="Shortcut Icon" href="/Images/Icons/favicon.ico" type="image/x-icon" />
+    <%  Response.WriteFile("/include/googlecode.aspx")%>
+
+    <!-- Owl Carousel Assets -->
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css" rel="stylesheet" />
+    <link rel="Shortcut Icon" href="/Images/favicon.ico" type="image/x-icon" />
+    <link href="/assets/js/google-code-prettify/prettify.css" rel="stylesheet" />
+    <%-- <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet" />--%>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+
+    <!-- Bootstrap -->
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css' />
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <%--  <link href="css/bootstrap.min.css" rel="stylesheet" />--%>
+    <link href='/css/style.css' rel="stylesheet" />
+    <%--    <link href="css/style.css" rel="stylesheet" />--%>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+
+
+    <style>
+        .gm-style-iw h2 {
+            text-align: center;
+        }
+
+        .gm-style-iw p {
+            text-align: center;
+        }
+
+        .gm-style-iw {
+            text-align: center;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <script>
+        $(function () {
+
+            var wd = parseInt($(window).width());
+            var b = parseInt("1024");
+
+            if (wd > b) {
+
+                $('.dropdown-toggle').removeAttr('data-toggle');
+                //$('.dropdown-menu').removeAttr('style');
+                //$('.dropdown').removeClass('open');
+
+            }
+            else {
+                $('.dropdown-toggle').attr("data-toggle", "dropdown");
+
+            }
+
+        })
+
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <%--    <link href='<%= ResolveUrl("~/js/bootstrap.min.js") %>' rel="stylesheet" />--%>
+    <script src='<%= ResolveUrl("~/js/bootstrap.min.js") %>'></script>
+
+    <meta name="alexaVerifyID" content="OJAZsj4xz8MNGntYp5kiuNxLuvA" />
+    <meta name="msvalidate.01" content="433BB2333EEB12BA1B5F1205870F7341" />
+    <!--Start of Zopim Live Chat Script-->
+    <script type="text/javascript">
+        window.$zopim || (function (d, s) {
+            var z = $zopim = function (c) { z._.push(c) }, $ = z.s =
+            d.createElement(s), e = d.getElementsByTagName(s)[0]; z.set = function (o) {
+                z.set.
+                _.push(o)
+            }; z._ = []; z.set._ = []; $.async = !0; $.setAttribute("charset", "utf-8");
+            $.src = "//v2.zopim.com/?3mQeAjAeWu8y9gFZxU5Ja6o1PPTTwdLU"; z.t = +new Date; $.
+            type = "text/javascript"; e.parentNode.insertBefore($, e)
+        })(document, "script");
+    </script>
+    <!--End of Zopim Live Chat Script-->
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1432290007070565');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+<img height="1" width="1"
+src="https://www.facebook.com/tr?id=1432290007070565&ev=PageView
+&noscript=1"/>
+</noscript>
+    <!-- End Facebook Pixel Code -->
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Header Start -->
+        <asp:ScriptManager ID="scinlandandalucia" runat="server"></asp:ScriptManager>
+        <div class="header-outer">
+            <div class="container">
+                <div class="row">
+                    <div class="header-inner">
+                        <div class="col-md-3 col-sm-4">
+                            <div class="row">
+                                <div class="logo">
+                                    <a href="Default.aspx">
+                                        <img class="img-responsive" src="/images/logo.png" alt="logo"/></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-9 col-sm-8">
+                            <div class="row">
+                                <div class="header-rt">
+                                    <div class="social">
+                                        <ul>
+                                            <li><a href="https://www.facebook.com/inlandandaluciahomes" target="_blank" title="facebook">
+                                                <img src="/images/fb-foot.png" alt="logo"/></a></li>
+                                            <li><a href="https://plus.google.com/+Inlandandalucia/" rel="publisher" target="_blank">
+                                                <img src="/images/g-foot.png" alt="logo"/></a></li>
+                                            <li><a href="http://inland-andalucia.blogspot.com" target="_blank" title="blog">
+                                                <img src="/images/blog-foot.png" alt="logo"/></a></li>
+                                            <li><a href="https://twitter.com/inlandandalusia" target="_blank" title="twitter">
+                                                <img src="/images/twt-foot.png" alt="logo"/></a></li>
+
+                                            <li><a href="https://www.youtube.com/channel/UCeku6fMjkT8mmRmB0kAaALw" target="_blank" title="YouTube">
+                                                <img src="/images/you-tube.png" alt="logo"/></a></li>
+                                            <li><a href="https://www.instagram.com/explore/tags/inlandandalucia/" target="_blank" title="Instagram">
+                                                <img src="/images/instapng.png" alt="logo"/></a></li>
+
+                                        </ul>
+                                    </div>
+                                    <div class="flags-top">
+                                        <ul>
+                                            <li>
+
+                                                <%--                                             <asp:ImageButton ID="ImageButtonEnglish" runat="server" ImageUrl="/images/flag-1.jpg" alt="English" ToolTip="English"  />--%>
+                                                <asp:LinkButton ID="ImageButtonEnglish" runat="server" OnClick="ImageButtonEnglish_Click" Text="" ToolTip="English" ValidationGroup="ss">
+
+                                                  <img src="/images/flag-1.jpg" alt="English" />
+                                                </asp:LinkButton>
+
+                                            </li>
+                                            <li>
+                                                <%--     <asp:ImageButton ID="ImageButtonSpanish" runat="server" ImageUrl="/images/flag-2.jpg" alt="Español" ToolTip="Español" />--%>
+                                                <asp:LinkButton ID="ImageButtonSpanish" runat="server" Text="Spanish" OnClick="ImageButtonSpanish_Click" ToolTip="Español" ValidationGroup="ss">
+                            <img src="/images/flag-2.jpg" alt="English"  />
+                                                </asp:LinkButton>
+                                            </li>
+                                            <li>
+                                                <asp:LinkButton ID="ImageButtonFrench" OnClick="ImageButtonFrench_Click" runat="server" Text="" ToolTip="Français" ValidationGroup="ss">
+                            <img src="/images/flag-3.jpg" alt="Français"  />
+                                                </asp:LinkButton>
+                                                <%--  <asp:ImageButton ID="ImageButtonFrench" runat="server" ImageUrl="/images/flag-3.jpg" alt="Français" ToolTip="Français" />--%>
+
+                                            </li>
+                                            <li>
+                                                <asp:LinkButton ID="ImageButtonDutch" OnClick="ImageButtonDutch_Click" runat="server" Text="" ToolTip="Deutsch" ValidationGroup="ss">
+                            <img src="/images/flag-4.jpg" alt="Deutsch" />
+                                                </asp:LinkButton>
+                                                <%--                                                <asp:ImageButton ID="ImageButtonGerman" runat="server" ImageUrl="/images/flag-4.jpg" alt="Deutsch" ToolTip="Deutsch" />--%></li>
+                                            <li>
+                                                <asp:LinkButton ID="ImageButtonGerman" OnClick="ImageButtonGerman_Click" runat="server" Text="" ToolTip="Nederlands" ValidationGroup="ss">
+                            <img src="/images/flag-5.jpg" alt="Nederlands"   />
+                                                </asp:LinkButton>
+                                                <%--   <asp:ImageButton ID="ImageButtonDutch" runat="server" ImageUrl="/images/flag-5.jpg" alt="Nederlands" ToolTip="Nederlands" />--%>
+
+                                            </li>
+                                        </ul>
+
+
+
+
+
+                                    </div>
+                                    <div class="address-top">
+                                        <p>
+                                            <asp:Literal ID="Literal4" Text="<%$Resources:Resource, MasterPageaddresslin1%>" runat="server"></asp:Literal>
+                                            <strong>+34 952 741 525 </strong>
+                                            <asp:Literal ID="Literal1" Text="<%$Resources:Resource, MasterPageaddressFree%>" runat="server">&nbsp;&nbsp;</asp:Literal>&nbsp;&nbsp;<a href="skype:inlandandalucia.com?call">
+                                                <img src="/images/skype_button.png" alt="Skype Me!" /></a>
+                                            <%--           <asp:Literal ID="Literal2" Text="<%$Resources:Resource, MasterPageaddresslin2%>" runat="server"></asp:Literal> --%>
+                                        </p>
+                                        <p>
+                                            <asp:Literal ID="Literal3" Text="<%$Resources:Resource, MasterPageaddresslin3%>" runat="server"></asp:Literal>
+                                            <strong>+34 953 587 040 </strong>
+                                            <asp:Literal ID="Literal5" Text="<%$Resources:Resource, MasterPageaddressFree%>" runat="server">&nbsp;&nbsp;</asp:Literal>&nbsp;&nbsp;
+                                            <a href="skype:live:nick_15273?call">
+                                                <img src="/images/skype_button.png" alt="Skype Me!" /></a>
+                                            <%--     <asp:Literal ID="Literal6" Text="<%$Resources:Resource, MasterPageaddresslin4%>" runat="server"></asp:Literal> --%>
+                                        </p>
+                                        <strong class="eml">EMAIL:&nbsp;<a href="mailto:info@inlandandalucia.com"> info@inlandandalucia.com</a></strong>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+        <!-- Navigation Start -->
+        <div class="navi-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="navbar navbar-default">
+
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header">
+                                    <span class="menu-txt">MENU</span>
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                                </div>
+
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                    <ul class="nav navbar-nav">
+                                        <li id="Home" runat="server"><a href="Default.aspx">
+                                            <asp:Literal ID="lblwelcome" Text="<%$Resources:Resource, Home %>" runat="server"></asp:Literal><span class="sr-only">(current)</span></a></li>
+                                        <li class="dropdown" id="prop" runat="server">
+                                            <a href="propsearch.aspx" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                                <asp:Literal ID="ltsearch" runat="server" Text="<%$Resources:Resource, PropertySearch %>"></asp:Literal>
+                                                <span class="caret"></span></a>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li id="Li1" runat="server" class="navresp"><a href="propsearch.aspx">
+                                                    <asp:Literal ID="Label2" runat="server" Text="<%$Resources:Resource, PropertySearch %>"></asp:Literal>
+                                                </a></li>
+                                                <li id="propsearch" runat="server"><a href="propsearch.aspx">
+                                                    <asp:Literal ID="Label3" runat="server" Text="<%$Resources:Resource, AdvancedSearch %>"></asp:Literal>
+                                                </a></li>
+                                                <li id="propsearch1" runat="server"><a href="property-search-andalucia.aspx ">
+                                                    <asp:Literal ID="Labe4" runat="server" Text="<%$Resources:Resource, SearchbyGooglemap %>"></asp:Literal>
+                                                </a></li>
+
+                                                <li id="Top50Properties" runat="server"><a href="Top50Properties.aspx">
+                                                    <asp:Literal runat="server" ID="lt" Text=" <%$Resources:Resource, Top50 %>"></asp:Literal></a></li>
+                                                <li id="andaluciapropertyviewingtrip" runat="server"><a href="andalucia-property-viewing-trip.aspx">
+                                                    <asp:Literal ID="Label1" Text="<%$Resources:Resource, ViewingTrip %>" runat="server"></asp:Literal></a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown" id="TownLocationInfo" runat="server"><a href="TownLocationInfo.aspx" data-toggle="dropdown" class="dropdown-toggle" role="button" aria-expanded="false">
+                                            <asp:Label ID="Label4" Text="<%$Resources:Resource, TownGuide %>" runat="server"></asp:Label>
+                                            <span class="caret"></span></a>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li id="Li2" runat="server" class="navresp"><a href="TownLocationInfo.aspx">
+                                                    <asp:Literal ID="Label5" Text="<%$Resources:Resource, TownGuide %>" runat="server"></asp:Literal>
+                                                </a></li>
+                                                <li id="CordobaInfo" runat="server"><a href="CordobaInfo.aspx">
+                                                    <asp:Literal ID="Label6" Text="<%$Resources:Resource, Cordobaprovince %>" runat="server"></asp:Literal>
+                                                </a></li>
+                                                <li id="GranadaInfo" runat="server"><a href="GranadaInfo.aspx">
+                                                    <asp:Literal ID="Label7" Text="<%$Resources:Resource, GranadaProvince %>" runat="server"></asp:Literal></a></li>
+                                                <li id="JaenInfo" runat="server"><a href="JaenInfo.aspx">
+                                                    <asp:Literal ID="Label8" Text="<%$Resources:Resource, Jaenprovince %>" runat="server"></asp:Literal></a></li>
+                                                <li id="MalagaInfo" runat="server"><a href="MalagaInfo.aspx">
+                                                    <asp:Literal ID="Label9" Text="<%$Resources:Resource, MalagaProvince %>" runat="server"></asp:Literal></a></li>
+                                                <li id="SevillaInfo" runat="server"><a href="SevillaInfo.aspx">
+                                                    <asp:Literal ID="Label10" Text="<%$Resources:Resource, SevilleProvince %>" runat="server"></asp:Literal></a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown" id="buyersguide" runat="server"><a href="buyersguide.aspx" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                            <asp:Label ID="Label11" Text="<%$Resources:Resource, BuyersGuide %>" runat="server"></asp:Label>
+                                            <span class="caret"></span></a>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li id="Li3" runat="server" class="navresp"><a href="BuyersGuide.aspx" title="Buying Process">
+                                                    <asp:Literal ID="Label12" Text="<%$Resources:Resource, BuyersGuide %>" runat="server"></asp:Literal>
+                                                </a></li>
+                                                <li id="BuyersGuide1" runat="server"><a href="BuyersGuide.aspx" title="Buying a Property">
+                                                    <asp:Literal ID="Label13" Text="<%$Resources:Resource, BuyingaProperty %>" runat="server"></asp:Literal></a></li>
+
+
+                                                <li id="BuyingProcess" runat="server"><a href="BuyingProcess.aspx" title="Buying Process">
+                                                    <asp:Literal ID="Label14" Text="<%$Resources:Resource, BuyingProcess %>" runat="server"></asp:Literal></a></li>
+                                                <li id="PropertyTaxes" runat="server"><a href="PropertyTaxes.aspx" title="Property Taxes">
+                                                    <asp:Literal ID="Label15" Text="<%$Resources:Resource, PropertyTaxes %>" runat="server"></asp:Literal></a></li>
+                                                <li id="BuyersGuideFAQS" runat="server"><a href="BuyersGuideFAQS.aspx" title="FAQS">
+                                                    <asp:Literal ID="Label16" Text="<%$Resources:Resource, FAQs %>" runat="server"></asp:Literal></a></li>
+                                                <li id="BuyersGuideUnpaidTaxes" runat="server"><a href="BuyersGuideUnpaidTaxes.aspx" title="Unpaid Taxes">
+                                                    <asp:Literal ID="Label17" Text="<%$Resources:Resource, UnpaidTaxes %>" runat="server"></asp:Literal></a></li>
+                                                <li id="BuyersGuideMortgage" runat="server"><a href="BuyersGuideMortgage.aspx" title="Mortgage">
+                                                    <asp:Literal ID="Label18" Text="<%$Resources:Resource, Mortgage %>" runat="server"></asp:Literal></a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown" id="inlandandaluciaa" runat="server"><a href="inland-andalucia.aspx" data-toggle="dropdown" class="dropdown-toggle" role="button" aria-expanded="false">
+                                            <asp:Label ID="Label19" Text="<%$Resources:Resource, AboutAndalucia %>" runat="server"></asp:Label><span class="caret"></span></a>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li id="Li4" runat="server" class="navresp"><a href="inland-andalucia.aspx" title="Location">
+                                                    <asp:Literal ID="Label20" Text="<%$Resources:Resource, AboutAndalucia %>" runat="server"></asp:Literal></a> </li>
+                                                <li id="LocationMapInlandTowns" runat="server"><a href="LocationMapInlandTowns.aspx" title="Location">
+                                                    <asp:Literal ID="Label21" Text="<%$Resources:Resource, Location %>" runat="server"></asp:Literal></a> </li>
+                                                <li id="weather" runat="server"><a href="weather.aspx" title="Weather">
+                                                    <asp:Literal ID="Label22" Text="<%$Resources:Resource, Weather %>" runat="server"></asp:Literal></a> </li>
+                                                <li id="AndaluciaAirports" runat="server"><a href="AndaluciaAirports.aspx" title="Airports">
+                                                    <asp:Literal ID="Label23" Text="<%$Resources:Resource, Airports %>" runat="server"></asp:Literal></a> </li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown" id="contactus" runat="server"><a href="contactus.aspx" data-toggle="dropdown" class="dropdown-toggle" role="button" aria-expanded="false">
+                                            <asp:Label ID="Label24" Text="<%$Resources:Resource, Contactus %>" runat="server"></asp:Label><span class="caret"></span></a>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li id="Li5" runat="server" class="navresp"><a href="contactus.aspx" title="Glossary">
+                                                    <asp:Literal ID="Label25" Text="<%$Resources:Resource, Contactus %>" runat="server"></asp:Literal></a></li>
+
+                                                <li><a href="ContactOffices.aspx" title="Our Offices">
+                                                    <asp:Literal ID="Label31" Text="<%$Resources:Resource, OurOffices %>" runat="server"></asp:Literal></a></li>
+                                                <li id="InlandAndaluciaGlossaryTerms" runat="server"><a href="InlandAndaluciaGlossaryTerms.aspx" title="Glossary">
+                                                    <asp:Literal ID="Label26" Text="<%$Resources:Resource, Glossary %>" runat="server"></asp:Literal></a></li>
+                                                <li id="InlandAndaluciaRealEstateArticles" runat="server"><a href="InlandAndaluciaRealEstateArticles.aspx" title=" Articles ">
+                                                    <asp:Literal ID="Label27" Text="<%$Resources:Resource, Articles %>" runat="server"></asp:Literal>
+                                                </a></li>
+                                                <li id="InlandAndaluciaNewsletter" runat="server"><a href="InlandAndaluciaNewsletter.aspx" title="Newsletter">
+                                                    <asp:Literal ID="Label28" Text="<%$Resources:Resource, Newsletter %>" runat="server"></asp:Literal></a></li>
+                                                <li id="UsefulLinks" runat="server"><a href="UsefulLinks.aspx" title="Useful Links">
+                                                    <asp:Literal ID="Label29" Text="<%$Resources:Resource, UsefulLinks %>" runat="server"></asp:Literal></a></li>
+                                                <li id="AgentLogin" runat="server"><a href="AgentLogin.aspx" title="Agents Private Area">
+                                                    <asp:Literal ID="Label30" Text="<%$Resources:Resource, AgentsPrivateArea %>" runat="server"></asp:Literal></a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="dropdown" id="lionlinemagazine" runat="server">
+                                            <a href="OnLineMagazine.aspx">ON-LINE MAGAZINE<span class="caret"></span></a>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- /.navbar-collapse -->
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation End -->
+        <!-- Main Content Area Start -->
+
+        <!-- Main Content Area Start -->
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        </asp:ContentPlaceHolder>
+        <div class="main-cont-area-otr">
+            <div class="container">
+                <div class="row">
+                    <div class="main-cont-area">
+
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+
+                        <!-- Right Portion Start -->
+
+                        <uc1:WebUserControlQuickSearch runat="server" ID="WebUserControlQuickSearch" />
+
+
+                        <!-- Right Portion Start -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+    <!-- Footer Start-->
+    <div class="footer-outer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-inr">
+                    <!-- Start -->
+                    <div class="col-md-3 col-sm-3">
+                        <h3>INLAND ANDALUCIA</h3>
+                        <div class="ft-links">
+                            <ul>
+                                <li><a href="aboutinlandandalucia.aspx" title="About us">
+                                    <asp:Literal ID="Literal7" Text="<%$Resources:Resource, FooterAboutUs %>" runat="server"></asp:Literal></a></li>
+                                <li><a href="contactus.aspx" title="Contact us">
+                                    <asp:Literal ID="Literal8" Text="<%$Resources:Resource, FooterContactUs %>" runat="server"></asp:Literal></a></li>
+                                <li><a href="InlandAndaluciaRealEstateArticles.aspx" title="Articles">
+                                    <asp:Literal ID="Literal9" Text="<%$Resources:Resource, FooterArticles %>" runat="server"></asp:Literal></a></li>
+                                <li><a href="InlandAndaluciaGlossaryTerms.aspx" title="Glossary">
+                                    <asp:Literal ID="Literal10" Text="<%$Resources:Resource, FooterGlosarry %>" runat="server"></asp:Literal></a></li>
+
+                                <li><a href="AgentLogin.aspx" title="Agents private area">
+                                    <asp:Literal ID="Literal11" Text="<%$Resources:Resource, FooterAgentprivatearea %>" runat="server"></asp:Literal></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End -->
+
+                    <!-- Start -->
+                    <div class="col-md-3 col-sm-3">
+                        <h3>
+                            <asp:Literal ID="Literal23" Text="<%$Resources:Resource, Footerpropertysearch %>" runat="server"></asp:Literal></h3>
+                        <div class="ft-links">
+                            <ul>
+                                <li><a href="propsearch.aspx" title="Advanced search">
+                                    <asp:Literal ID="Literal12" Text="<%$Resources:Resource, FooterAdvanceSearch %>" runat="server"></asp:Literal></a></li>
+                                <li><a href="Top50Properties.aspx" title="Top 50">
+                                    <asp:Literal ID="Literal13" Text="<%$Resources:Resource, FooterTop50%>" runat="server"></asp:Literal></a></li>
+                                <%--                  <li><a href="invest-to-let-andalucia.aspx" title="Invest 2 let"><asp:Literal ID="Literal14" Text="<%$Resources:Resource, FooterInvent2let %>" runat="server"></asp:Literal></a></li>--%>
+                                <li><a href="property-search-andalucia.aspx" title="Search by Google map">
+                                    <asp:Literal ID="Literal15" Text="<%$Resources:Resource, FooterSearchbygooglemap %>" runat="server"></asp:Literal></a></li>
+
+
+
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End -->
+
+                    <!-- Start -->
+                    <div class="col-md-3 col-sm-3">
+                        <h3>
+                            <asp:Literal ID="Literal16" Text="<%$Resources:Resource, FooterTownguide %>" runat="server"></asp:Literal></h3>
+                        <div class="ft-links">
+                            <ul>
+                                <li><a href="CordobaInfo.aspx" title="Córdoba">C&oacute;rdoba</a></li>
+                                <li><a href="JaenInfo.aspx" title="Jaén">Ja&eacute;n</a></li>
+                                <li><a href="GranadaInfo.aspx" title="Granada">Granada</a></li>
+                                <li><a href="MalagaInfo.aspx" title="Málaga">M&aacute;laga</a></li>
+                                <li><a href="SevillaInfo.aspx" title="Seville">Seville</a></li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End -->
+
+                    <!-- Start -->
+                    <div class="col-md-3 col-sm-3">
+                        <h3>
+                            <asp:Literal ID="Literal17" Text="<%$Resources:Resource, FooterBuyersguide %>" runat="server"></asp:Literal></h3>
+                        <div class="ft-links">
+                            <ul>
+                                <li><a href="buyersguide.aspx" title="Buying a property">
+                                    <asp:Literal ID="Literal18" Text="<%$Resources:Resource, FooterBuyingproperty %>" runat="server"></asp:Literal></a></li>
+                                <li><a href="BuyingProcess.aspx" title="Buying process">
+                                    <asp:Literal ID="Literal19" Text="<%$Resources:Resource, FooterBuyingprocess %>" runat="server"></asp:Literal></a></li>
+                                <li><a href="PropertyTaxes.aspx" title="Property taxes">
+                                    <asp:Literal ID="Literal20" Text="<%$Resources:Resource, Footerpropertytaxes %>" runat="server"></asp:Literal></a></li>
+                                <li><a href="BuyersGuideFAQS.aspx" title="FAQ">
+                                    <asp:Literal ID="Literal21" Text="<%$Resources:Resource, FooterFAQ %>" runat="server"></asp:Literal></a></li>
+                                <li><a href="BuyersGuideMortgage.aspx" title="Mortgage">
+                                    <asp:Literal ID="Literal22" Text="<%$Resources:Resource, FooterMortage %>" runat="server"></asp:Literal></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End -->
+                </div>
+                <!-- Footer Inner End -->
+
+                <!-- Footer Bottom Start -->
+                <div class="footer-bot">
+                    <div class="col-md-6">
+                        <p>All rights reserved InlandAndalucia © follow us on</p>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="social-ft">
+                            <ul>
+
+                                <li><a href="https://www.facebook.com/inlandandaluciahomes" target="_blank">
+                                    <img src="/images/fb-foot.png" alt="logo"/></a></li>
+                                <li><a href="https://plus.google.com/+Inlandandalucia/" rel="publisher" target="_blank">
+                                    <img src="/images/g-foot.png" alt="logo"/></a></li>
+                                <li><a href="http://inland-andalucia.blogspot.com" target="_blank">
+                                    <img src="/images/blog-foot.png" alt="Read articles in Blogger"/></a></li>
+                                <li><a href="https://twitter.com/inlandandalusia" target="_blank">
+                                    <img src="/images/twt-foot.png" alt="Twitter Inland Andalusia"/></a></li>
+
+                                <li><a href="https://www.youtube.com/channel/UCeku6fMjkT8mmRmB0kAaALw" target="_blank" title="YouTube">
+                                    <img src="/images/you-tube.png" alt="logo"/></a></li>
+                                <li><a href="https://www.instagram.com/explore/tags/inlandandalucia/" target="_blank" title="Instagram">
+                                    <img src="/images/instapng.png" alt="logo"/></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Footer Bottom End -->
+
+
+            </div>
+        </div>
+    </div>
+    <div class="footer-bot-new">
+        <p>Designed by <a target="_blank" href="http://www.hashsoftware.com">Hash Softwares </a></p>
+    </div>
+
+
+    <!-- Footer End -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+    <script type="text/javascript">
+        WebFontConfig = {
+            google: { families: ['Dancing+Script::latin'] }
+        };
+        (function () {
+            var wf = document.createElement('script');
+            wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+              '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+        })(); </script>
+    <iframe id="IFRAME1" src="KeepSessionAlive1.aspx"  width="0" height="0" runat="server"></iframe>
+    <script src="http://davidlynch.org/projects/maphilight/jquery.maphilight.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.map').maphilight({
+                'stroke': false,
+                'fillOpacity': '0.5',
+                fillColor: 'ff4a00',
+            });
+        });
+    </script>
+</body>
+</html>

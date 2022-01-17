@@ -1,0 +1,93 @@
+﻿.buyer-paypal .form-group {
+    margin-bottom: 15px;
+    float: left;
+    width: 100%;
+}
+
+.buyer-paypal.contact-bg .but-sub {
+    float: none;
+}
+
+input#ContentPlaceHolder1_CheckBoxArchived {
+    margin-right: 10px;
+}
+.buyer-paypal.contact-bg .form-group {
+    margin-bottom: 15px;
+    display: block;
+    float: left;
+    width: 100%;
+}
+span#ContentPlaceHolder1_lblProperty h3, span#ContentPlaceHolder1_lblProperty h4 {
+    width: 100%;
+    float: left;
+    background: #7F80B9;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+span#ContentPlaceHolder1_lblProperty h3, span#ContentPlaceHolder1_lblProperty h4 {
+    margin: 0;    font-size: 16px;
+    color: white;
+}
+h3.text-center.bg-success.table-bordered {
+    background: #303297;
+    color: #fff;
+    padding: 10px;
+}
+.sucessBooked {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    display: block;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+    .sucessBooked h3 {
+        display: inline-block;
+        float: left;
+        font-size: 16px;
+        margin-right: 6px !important;
+        color: #3c763d; background: transparent !important;
+    }
+span#ContentPlaceHolder1_lblProperty {
+    margin-bottom: 30px;
+    display: block;
+    float: left;
+    width: 100%;
+}
+.sucessBooked h4 {
+    background: transparent !important;
+}
+.sucessBooked span#ContentPlaceHolder1_lblProperty {
+    margin-bottom: 0;
+    display: inline-block;
+    float: left;
+    width: auto;
+}
+    .sucessBooked span#ContentPlaceHolder1_lblProperty h3 {
+        color: #3c763d;
+        padding: 0; font-size:14px;
+        line-height: 20px;
+    }
+.sucessBooked h4 {
+    padding: 0 !important;
+}
+.thanks-sec {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin: 60px 0;
+}
+.thank-check i {
+    font-size: 70px;
+    color: #303297;
+}
+.thanks-sec h2 {
+    font-size: 42px;
+    margin-top: 50px;
+    text-transform: uppercase;
+}
+.thanks-sec p {
+    font-size: 18px;
+}

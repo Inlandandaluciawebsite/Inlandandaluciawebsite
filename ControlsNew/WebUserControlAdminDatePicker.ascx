@@ -1,0 +1,2 @@
+﻿<%@ Control Language="VB" AutoEventWireup="false" CodeFile="WebUserControlAdminDatePicker.ascx.vb" Inherits="WebUserControlAdminDatePicker" %>
+<asp:DropDownList ID="DropDownListDay" runat="server" Width="50px" AutoPostBack="true"></asp:DropDownList> / <asp:DropDownList ID="DropDownListMonth" runat="server" Width="50px" AutoPostBack="true" ></asp:DropDownList> / <asp:DropDownList ID="DropDownListYear" runat="server" Width="70px" AutoPostBack="true" ></asp:DropDownList>

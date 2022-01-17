@@ -1,0 +1,73 @@
+﻿<?xml version="1.0"?>
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  http://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+<configuration>
+  <system.web.extensions>
+    <scripting>
+      <webServices>
+        <jsonSerialization maxJsonLength="1000000000"/>
+      </webServices>
+    </scripting>
+  </system.web.extensions>
+  <system.web>
+    <compilation strict="false" explicit="true" targetFramework="4.0" debug="true"/>
+    <sessionState timeout="30"/>
+    <customErrors mode="Off">
+      <error statusCode="404" redirect="~/404.aspx"/>
+    </customErrors>
+    <httpRuntime maxRequestLength="20480" executionTimeout="90"/>
+    <httpHandlers>
+      <add verb="*" path="AjaxFileUploadHandler.axd" type="AjaxControlToolkit.AjaxFileUploadHandler, AjaxControlToolkit"/>
+    </httpHandlers>
+  </system.web>
+  <system.webServer>
+    <defaultDocument>
+      <files>
+        <clear/>
+        <add value="index.aspx"/>
+      </files>
+    </defaultDocument>
+    <httpErrors>
+      <remove statusCode="404" subStatusCode="-1"/>
+      <error statusCode="404" prefixLanguageFilePath="" path="/404.aspx" responseMode="ExecuteURL"/>
+    </httpErrors>
+    <rewrite>
+      <rules>
+        <rule name="Canonical Host Name">
+          <match url="^(.*)"/>
+          <conditions>
+            <add input="{HTTP_HOST}" pattern="^www\.inlandandalucia\.com$" negate="true"/>
+          </conditions>
+          <action type="Redirect" url="http://www.inlandandalucia.com/{R:1}"/>
+        </rule>
+      </rules>
+    </rewrite>
+    <modules runAllManagedModulesForAllRequests="true"/>
+    <validation validateIntegratedModeConfiguration="false"/>
+    <handlers>
+      <add name="AjaxFileUploadHandler" verb="*" path="AjaxFileUploadHandler.axd" type="AjaxControlToolkit.AjaxFileUploadHandler, AjaxControlToolkit"/>
+    </handlers>
+  </system.webServer>
+  <connectionStrings>
+    <add name="IA" connectionString="Data Source=(local);Initial Catalog=IA;User ID=inlandan;Password=2605ej"/>
+  </connectionStrings>
+  <system.net>
+    <mailSettings>
+      <smtp from="info@inlandandalucia.com">
+        <!--<network host="SMTP.EMAILSRVR.COM" port="25" userName="info@inlandandalucia.com" password="algmailin"/>-->
+        <network host="SMTP.EMAILSRVR.COM" port="25" userName="info@inlandandalucia.com" password="lipbalm"/>
+      </smtp>
+    </mailSettings>
+  </system.net>
+  <appSettings>
+    <add key="InlandAndaluciaEmailAddress" value="info@inlandandalucia.com"/>
+    <add key="TranslationStats" value="true"/>
+    <add key="KyeroXMLLocation" value="\Kyero\Kyero.xml"/>
+    <add key="PropertyImageWidth" value="704"/>
+    <add key="PropertyImageHeight" value="528"/>
+    <add key="PropertyImageDPI" value="96"/>
+    <add key="PropertyImageMaxSizeInKilobytes" value="50"/>
+  </appSettings>
+</configuration>

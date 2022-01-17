@@ -1,0 +1,207 @@
+/* 
+/* Global Styles */
+/*
+ font-family: 'Open Sans', sans-serif;
+ font-family: 'Signika', sans-serif;
+ font-family: 'Oswald', sans-serif;
+ font-family: 'Noto Sans', sans-serif;
+*/
+body {
+  margin-top: 50px;
+}
+
+#wrapper {
+  padding-left: 0;
+}
+
+#page-wrapper {
+  width: 100%;
+  padding: 5px 15px;
+}
+
+/* Nav Messages */
+
+.messages-dropdown .dropdown-menu .message-preview .avatar,
+.messages-dropdown .dropdown-menu .message-preview .name,
+.messages-dropdown .dropdown-menu .message-preview .message,
+.messages-dropdown .dropdown-menu .message-preview .time {
+  display: block;
+}
+
+.messages-dropdown .dropdown-menu .message-preview .avatar {
+  float: left;
+  margin-right: 15px;
+}
+
+.messages-dropdown .dropdown-menu .message-preview .name {
+  font-weight: bold;
+}
+
+.messages-dropdown .dropdown-menu .message-preview .message {
+  font-size: 12px;
+}
+
+.messages-dropdown .dropdown-menu .message-preview .time {
+  font-size: 12px;
+}
+
+
+/* Nav Announcements */
+
+.announcement-heading {
+  font-size: 50px;
+  margin: 0;
+}
+
+.announcement-text {
+  margin: 0;
+}
+
+/* Table Headers */
+
+table.tablesorter thead {
+  cursor: pointer;
+}
+
+table.tablesorter thead tr th:hover {
+  background-color: #f5f5f5;
+}
+
+/* Flot Chart Containers */
+
+.flot-chart {
+  display: block;
+  height: 400px;
+}
+
+.flot-chart-content {
+  width: 100%;
+  height: 100%;
+}
+
+/* Edit Below to Customize Widths > 768px */
+@media (min-width:768px) {
+
+  /* Wrappers */
+
+  #wrapper {
+	padding-left: 200px;
+  }
+
+  #page-wrapper {
+	padding: 15px 25px;
+  }
+
+  /* Side Nav */
+
+
+  .side-nav {
+	margin-left: -20px;
+	left: 20px;
+	width: 200px;
+	position: fixed;
+	top: 68px;
+	height: 100%;
+	border-radius: 0;
+	border: none;
+	background-color: #3c3c3c;
+	overflow-y: auto;
+  }
+
+  /* Bootstrap Default Overrides - Customized Dropdowns for the Side Nav */
+
+  .side-nav>li.dropdown>ul.dropdown-menu {
+	position: relative;
+	min-width: 225px;
+	margin: 0;
+	padding: 0;
+	border: none;
+	border-radius: 0;
+	background-color: #232323;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+  }
+
+
+  .side-nav>li.dropdown>ul.dropdown-menu>li>a {
+	color: #999999;
+	padding: 10px 10px 10px 45px;
+  }
+
+  .side-nav>li.dropdown>ul.dropdown-menu>li>a:hover,
+  .side-nav>li.dropdown>ul.dropdown-menu>li>a.active,
+  .side-nav>li.dropdown>ul.dropdown-menu>li>a:focus {
+	color: #fff;
+	background-color: #080808;
+  }
+
+  .side-nav>li>a {
+	width: 200px;
+  }
+
+  .navbar-inverse .navbar-nav>li>a:hover,
+  .navbar-inverse .navbar-nav>li>a:focus {
+	background-color: #232323;
+  }
+
+  /* Nav Messages */
+
+  .messages-dropdown .dropdown-menu {
+	min-width: 300px;
+  }
+
+  .messages-dropdown .dropdown-menu li a {
+	white-space: normal;
+  }
+
+  .navbar-collapse {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+}
+.navbar-inverse {background-color: #232323;}
+.navbar-collapse .side-nav .fa{margin-right:10px;}
+.even{background:#f9f9f9;}
+.mb0{margin-bottom:0;}
+.ml90{margin-left:90px;}
+.dash-icon tr td a{float:left; color:#3c3c3c;  font-family: 'Signika', sans-serif; font-size:14px; font-weight:300; text-shadow:1px 1px 1px #fff}
+.dash-icon tr td a img{opacity:.7;}
+.dash-icon tr td a {text-decoration:none;}
+.dash-icon tr td a:hover img{opacity:10;}
+.dash-icon tr td:hover a{color:#656565;}
+.dash-icon tr td a span{float:left; width:100%; display:block;}
+.topright .caret{margin-left:10px;}
+.adduser form label{font-family:'Open Sans',sans-serif; font-size:13px; font-weight:500; font-weight:normal; height:33px; line-height:33px; margin:0; vertical-align:middle;}
+.adduser .form-group{float:left; margin-bottom:10px; width:100%;}
+.adduser input[type=checkbox]{height:auto; line-height:normal; width:auto; margin-top:10px;}
+.event-text .breadcrumb{font-family: 'Open Sans', sans-serif; font-size:13px;}
+.event-text .breadcrumb > li + li:before{content:none}
+.event-text .breadcrumb > li{line-height:22px;}
+.pannel{background:#f5f5f5;}
+.pannel ul{background:#e2dfdf;}
+.events select, .tab-content input{border:solid 2px #9a9595; margin-right:10px;}
+#myTabContent .table-responsive.table-bordered{margin-top:20px;}
+#myTabContent .table-responsive.table-bordered th{padding:15px; vertical-align:middle; font-family: 'Open Sans', sans-serif; font-size:13px; font-weight:600;}
+#myTabContent .table-responsive.table-bordered td{padding:10px 15px; font-family: 'Open Sans', sans-serif; font-size:13px; font-weight:normal; color:#696969}
+#myTabContent .table-responsive.table-bordered .even{background:#e2dfdf;}
+.mevents table th{font-family: 'Open Sans', sans-serif; font-size:13px; font-weight:normal;}
+.mevents.table-responsive {border: 1px solid #DDDDDD; margin-bottom: 15px; overflow-x: scroll; overflow-y: hidden; width: 100%;}
+.mevents.table-responsive tr th{text-align:center; padding:15px 10px; width:400px;}
+.mevents.table-responsive tr td{vertical-align:middle; text-align:center; padding:10px }
+.dropdown-toggle .fa{margin-right:10px;}
+.mevents .fa.fa-sort{padding-left:5px;}
+.mevents th, .events th{cursor:pointer;}
+#myTabContent .table-responsive.table-bordered.event th, #myTabContent .table-responsive.table-bordered.event td{padding:2; border:solid 1px #fff;}
+.login-page{margin:0; background:url(../images/login-bg_body.jpg) repeat-x left top;}
+.login-page header{background:#232323; padding:20px 0 5px 0}
+.login-container{width:590px; margin:auto; height:393px; margin-top:50px; background:url(../images/login-by.jpg) left top no-repeat;}
+.mt97{margin-top:67px;} .ml100{margin-left:80px;}
+.login-container h1{ font-family: 'Oswald', sans-serif; font-size:28px; font-weight:normal; margin-left:86px;}
+.login-container input{background:#e3e8ef url(../images/inputtick.png) 95% center no-repeat; height:33px; line-height:33px; border:solid 1px #9aa4b0; border-radius:4px; margin-right:10px; font-size:12px; color:#858d98;}
+.login-container .btn{font-size:12px;}
+.login-container form{margin-top:30px;}
+footer{background:#232323; height:45px; z-index:1000; position:fixed; left:0; bottom:0; margin-left:200px; width:100%; display:block; font-size:13px; line-height:45px;}
+footer p {color:#696969; padding:0 10px; font-size:13px;}
+footer a{color:#dfdfdf; font-size:13px;}
+footer a:hover{color:#fff;}

@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="OurService" xml:space="preserve">
+    <value>Nuestra zona de servicio es verdaderamente amplio y abarca una gran parte del interior de Andalucía. Si usted tiene un deseo de comprar una propiedad rural en el interior de un verdadero espacio español y está interesado en alguna de las aldeas en los alrededores Alcala la Real, Alora, Antequera, Archidona, Mollina, Fuente de Piedra, Campillos, Iznajar, Villanueva de Algaidas, Lucena, Loja, Osuna, Salinas, Alameda y todos los lugares en el medio, así como la Subbetica National Park que cubren las regiones de Antequera, Cádiz, Cordoba, Granada, Jaen, Málaga y Sevilla entonces &lt;a href="ContactOffices.aspx" title="come and see us"&gt;venir a vernos&lt;/a&gt;!</value>
+  </data>
+  <data name="pleasealso" xml:space="preserve">
+    <value>Recuerde también, estamos agregando propiedades continentales a diario a nuestro sitio web, casi siempre hay algo nuevo!</value>
+  </data>
+  <data name="Specialist" xml:space="preserve">
+    <value>Su Inmobiliaria en el interior de Andalucía</value>
+  </data>
+  <data name="welcome" xml:space="preserve">
+    <value>Bienvenido a Inland Andalucia Ltd, su Inmobiliaria situado en Mollina, Málaga y Alcalá la Real en Jaén. Estamos especializados en propriedades en el interior de Andalucía. Si usted busca una propiedad, sea un Cortijo, una hacienda, una finca o una casa de pueblo, un chalet o parcelas, llamanos o descubre la &lt;a href="PropSearch.aspx"&gt;cartera de propiedades&lt;/a&gt;</value>
+  </data>
+  <data name="AboutAndalucia" xml:space="preserve">
+    <value>Sobre Andalucía</value>
+  </data>
+  <data name="AdvancedSearch" xml:space="preserve">
+    <value>Búsqueda Avanzada</value>
+  </data>
+  <data name="AgentsPrivateArea" xml:space="preserve">
+    <value>Zona Agente</value>
+  </data>
+  <data name="Airports" xml:space="preserve">
+    <value>Aeropuertos</value>
+  </data>
+  <data name="Articles" xml:space="preserve">
+    <value>Artículos</value>
+  </data>
+  <data name="BuyersGuide" xml:space="preserve">
+    <value>Guía Comprador</value>
+  </data>
+  <data name="BuyingaProperty" xml:space="preserve">
+    <value>Comprar una Propiedad</value>
+  </data>
+  <data name="BuyingProcess" xml:space="preserve">
+    <value>Proceso de Compra</value>
+  </data>
+  <data name="Contactus" xml:space="preserve">
+    <value>Contáctenos</value>
+  </data>
+  <data name="Cordobaprovince" xml:space="preserve">
+    <value>Provincia de Córdoba</value>
+  </data>
+  <data name="FAQs" xml:space="preserve">
+    <value>Preguntas Frequentes</value>
+  </data>
+  <data name="Glossary" xml:space="preserve">
+    <value>Glosario de Términos</value>
+  </data>
+  <data name="GranadaProvince" xml:space="preserve">
+    <value>Provincía de Granada</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Inicio</value>
+  </data>
+  <data name="Jaenprovince" xml:space="preserve">
+    <value>Provincia de Jaén</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Ubicación</value>
+  </data>
+  <data name="MalagaProvince" xml:space="preserve">
+    <value>Provincia de Málaga</value>
+  </data>
+  <data name="Mortgage" xml:space="preserve">
+    <value>Hipoteca</value>
+  </data>
+  <data name="Newsletter" xml:space="preserve">
+    <value>Newsletter</value>
+  </data>
+  <data name="OurOffices" xml:space="preserve">
+    <value>Nuestras Oficinas</value>
+  </data>
+  <data name="PropertySearch" xml:space="preserve">
+    <value>Buscar</value>
+  </data>
+  <data name="PropertyTaxes" xml:space="preserve">
+    <value>Impuestos de la Propiedad</value>
+  </data>
+  <data name="SearchbyGooglemap" xml:space="preserve">
+    <value>Buscar por Ubicación</value>
+  </data>
+  <data name="SevilleProvince" xml:space="preserve">
+    <value>Provincía de Sevilla</value>
+  </data>
+  <data name="Top50" xml:space="preserve">
+    <value>Top50</value>
+  </data>
+  <data name="TownGuide" xml:space="preserve">
+    <value>Guía Turística</value>
+  </data>
+  <data name="UnpaidTaxes" xml:space="preserve">
+    <value>Impuestos sin Pagar</value>
+  </data>
+  <data name="UsefulLinks" xml:space="preserve">
+    <value>Enlaces útiles</value>
+  </data>
+  <data name="ViewingTrip" xml:space="preserve">
+    <value>Viaje para Visitar Propiedades</value>
+  </data>
+  <data name="Weather" xml:space="preserve">
+    <value>El Tiempo</value>
+  </data>
+  <data name="ContactUsSendtheform" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="JaujaLocationDetail1" xml:space="preserve">
+    <value>Jauja derives its name from Arabic, which comes from "Xauxa" which means passage or gate, as its location was the point used by the Arabs to connect with the plains of Granada Ecija.</value>
+  </data>
+  <data name="JaujaLocationDetail2" xml:space="preserve">
+    <value>Jauja is located to the Southwest of the province of Cordoba, in the municipality of Lucena at a distance of 25 Km The village is between 220 and 240 meters above sea level on the banks of the River Genil, with coordinates of 37 ° 18 '10'' north latitude and 4 ° 39' 22'' west longitude.</value>
+  </data>
+  <data name="JaujaLocationDetail3" xml:space="preserve">
+    <value>Its terrain is broken, placing the core in the foot of a mountain of mountains, and its quite hilly relief, because apart of being in the foothills of the Subbéticas. The nature of its soil has made riverbeds that have been embedded, forming numerous slopes on its banks and many streams. The soil of this land is made up of Quaternary sedimentary layers, strongly affected by erosion. These lands are divided into red and Blancares.</value>
+  </data>
+  <data name="JaujaLocationDetail4" xml:space="preserve">
+    <value>As for hydrography, the area is housed between the beds of the rivers Genil and Anzur, with a drainage network formed by numerous streams, among which are those of San Miguel, Bermejo, White, "Colorao" Fuillerat and Monk. These are dry most of the year, but in the rainy fall with great flow, causing erosion of arable land, and sometimes floods.</value>
+  </data>
+  <data name="JaujaLocationDetail5" xml:space="preserve">
+    <value>Jauja still maintains its configuration as a people with elements of the architecture that place immediately in your environment and rural countryside. In regard to the architecture of the houses you can still find small houses with lime and tile as defining elements.</value>
+  </data>
+  <data name="JaujaLocationDetail6" xml:space="preserve">
+    <value>The two main local festivals are held in honor of their patron: St. Dominic and the Virgin of the Rosary, the first on August 4 and the second on October 7, during which the image in procession of the Employer.</value>
+  </data>
+  <data name="JaujaLocationDetail7" xml:space="preserve">
+    <value>Today it has a population of approximately 1,000 inhabitants of most its main activity is agriculture and livestock. Notably, the main activity of olive cultivation and the three banks of orchards there on the banks of the Genil, which in recent years has had a boom in greenhouse cultivation.</value>
+  </data>
+  <data name="JaujaLocationDetail8" xml:space="preserve">
+    <value>The streets that make up this town are: Church Street, Mill Street and the street Lawsuit that form the backbone of the town and are parallel to each other and other cross like Ronda, waiters or lane bridge Neighborhood and Alley.</value>
+  </data>
+  <data name="JaujaLocationheading" xml:space="preserve">
+    <value>Jauja Andalucia</value>
+  </data>
+  <data name="descblog" xml:space="preserve">
+    <value>&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;div class="img-blog"&gt;&lt;img src="/BlogImages/newinland.jpg" alt="" /&gt;&lt;/div&gt;
+&lt;p&gt;As well as many other dishes from various parts of the world, paella evolved from &amp;nbsp;local produce. It is estimated that its preparation began between the fifteenth and sixteenth centuries, when the inhabitants of some of the rural areas of Valencia started to mix the different ingredients they had available to make a fast and easy meal for the farmers and shepherds.&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;&lt;span&gt;In principle, they added fresh vegetables to rice with chicken and rabbit, as well as saffron and olive oil, ingredients that gave it its characteristic flavour of the Mediterranean. As paella became more popular, seafood and shellfish were added.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="m_-4573994574725298096m_-2849109210885379119p1"&gt;&lt;span class="m_-4573994574725298096m_-2849109210885379119s1"&gt;There are many stories that revolve around this mythical Spanish recipe, one of them tells that it is a dish that was usually consumed in the evenings. Another legend, dating to the Spanish War of Independence, relates that a French general, impressed by the exquisite taste of paella, told a woman that "for each new plate of rice cooked he would free a Spanish prisoner." In the end, the military had to release 176 prisoners.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="m_-4573994574725298096m_-2849109210885379119p1"&gt;&lt;span class="m_-4573994574725298096m_-2849109210885379119s1"&gt;The exact origin of paella, pride of any Valencian, is located in the rice area near the lake of Albufera.&amp;nbsp; Olive oil and saffron, essential ingredients for its preparation were added to the original recipe. Similarly, the farmers of the time, in addition to the meat and vegetables they had on hand, incorporated tavella and ferraura (two native types of green beans) and garrof&amp;oacute; (a flat and white bean), as well as paprika, rosemary and snails.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3 class="blog-sub-hd"&gt;&lt;span&gt;Why is it called paella?&lt;/span&gt;&lt;/h3&gt;
+&lt;p class="blog-main-txt"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;div class="img-blog"&gt;&lt;img src="/BlogImages/inland2-psd.jpg" alt="" /&gt;&lt;/div&gt;
+&lt;p class="m_-4573994574725298096m_-2849109210885379119p1"&gt;&lt;span class="m_-4573994574725298096m_-2849109210885379119s1"&gt;This dish, one of the most famous in Spain, owes its name to the frying pan in which it is cooked called a "paella" or "paellera". The shape of this pan should be a minimum diameter of 30 centimeters, with edges of 7 to 12 centimeters, not very deep, with two handles fixed to the sides that support the stew and allow it to be transported easily.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="m_-4573994574725298096m_-2849109210885379119p1"&gt;&lt;span class="m_-4573994574725298096m_-2849109210885379119s1"&gt;For an authentic Valencian paella, the Ministry of Agriculture of the Valencian Government has decreed that ten ingredients must be included, &amp;nbsp;chicken, rabbit, basil (green bean), garrofon, tomato, rice, olive oil, water, saffron and salt.&amp;nbsp; However, garlic, artichoke, duck, paprika, snails or rosemary can also be added.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="m_-4573994574725298096m_-2849109210885379119p1"&gt;&lt;span class="m_-4573994574725298096m_-2849109210885379119s1"&gt;Over time,&amp;nbsp;other variations have been created of which&amp;nbsp;"paella marinera" is the most popular and accepted. In this one vegetables and meat are replaced by diverse seafood, molluscs and fish. (In addition to supplying the water for fish stock - not sure about this bit!).&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="m_-4573994574725298096m_-2849109210885379119p1"&gt;&lt;span class="m_-4573994574725298096m_-2849109210885379119s1"&gt;Another type of paella is "mixed" in which, as it's name suggests &amp;nbsp;meat, chicken or rabbit is mixed with seafood. This recipe is rarely consumed in Valencia but will be found in most non-Valencian or foreign restaurants.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="m_-4573994574725298096m_-2849109210885379119p1"&gt;&lt;span class="m_-4573994574725298096m_-2849109210885379119s1"&gt;&amp;nbsp;Paella alicantina" &amp;nbsp;is made from a broth, which contains fish (sepia, prawns and swordfish) and meat (chicken or rabbit). Its elaboration originates from the south of Valencia, especially in the counties of l'Alacant&amp;iacute;-Alcoi&amp;agrave; or the Foia of Castalla.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="m_-4573994574725298096m_-2849109210885379119p1"&gt;&lt;span class="m_-4573994574725298096m_-2849109210885379119s1"&gt;Paella became famous first in Spain, and began to spread to other cultures and countries such as Belgium and France after the nineteenth century.&amp;nbsp; Its rise in most continents was mainly due to being a festive dish that became common in family gatherings, and was born to gather people together and to celebrate.&lt;/span&gt;&lt;/p&gt;</value>
+  </data>
+  <data name="SubTitleBlog" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TitleNewBlog" xml:space="preserve">
+    <value>Paella was born in Valencia</value>
+  </data>
+  <data name="Antequerainformation" xml:space="preserve">
+    <value>Antequera Informationen</value>
+  </data>
+  <data name="Antequerainformation1" xml:space="preserve">
+    <value>Die erste Sichtung von Antequera in der Ferne ist die einer typischen mittelalterlichen Stadt, mit den Türmen ihrer vielen Kirchen und den Mauern und Türmen der großen maurischen Festung, die sich gegen den Himmel abhebt.</value>
+  </data>
+  <data name="Antequerainformation10" xml:space="preserve">
+    <value>oder</value>
+  </data>
+  <data name="Antequerainformation11" xml:space="preserve">
+    <value>Der Liebessprung</value>
+  </data>
+  <data name="Antequerainformation12" xml:space="preserve">
+    <value>Diese megalithischen Massengräber aus riesigen Steinplatten wurden von den ursprünglichen iberischen Menschen geschaffen und reichen 5000 Jahre zurück</value>
+  </data>
+  <data name="Antequerainformation13" xml:space="preserve">
+    <value>Barfuß Carmelitas</value>
+  </data>
+  <data name="Antequerainformation14" xml:space="preserve">
+    <value>danach geben Sie Ihre Bestellung auf und legen Ihr Geld auf das Tablett</value>
+  </data>
+  <data name="Antequerainformation15" xml:space="preserve">
+    <value>Die versteckte Nonne dreht dann das Tablett herum, während das Gebäck aus der Tür kommt.</value>
+  </data>
+  <data name="Antequerainformation16" xml:space="preserve">
+    <value>Park Nature Reserve ist bekannt für ungewöhnliche Kalksteinformationen</value>
+  </data>
+  <data name="Antequerainformation17" xml:space="preserve">
+    <value>Park Nature Reserve liegt etwa 30 km nördlich von</value>
+  </data>
+  <data name="Antequerainformation18" xml:space="preserve">
+    <value>Stadt in Richtung Antequera in der Nähe des Dorfes</value>
+  </data>
+  <data name="Antequerainformation19" xml:space="preserve">
+    <value>Innerhalb</value>
+  </data>
+  <data name="Antequerainformation2" xml:space="preserve">
+    <value>Im Tal breitet sich reiches Farmland aus, das vom Fluss Guadalhorce bewässert wird. Seit Jahrhunderten gehört dies zu den fruchtbarsten Gebieten Andalusiens und ist heute einer der führenden Produzenten von Spargel, Getreide und Oliven. Im Sommer werden die Felder leuchtend gelb mit Sonnenblumen</value>
+  </data>
+  <data name="Antequerainformation20" xml:space="preserve">
+    <value>Die 17 Quadratkilometer des Parks gehören zu den schönsten und beeindruckendsten Kalksteinlandschaften Europas. Das ganze Gebiet war bis vor hundert Millionen Jahren unter Wasser</value>
+  </data>
+  <data name="Antequerainformation21" xml:space="preserve">
+    <value>Dann zwangen ihn die heftigen Bewegungen der Erdkruste in Hügel und Berge bis zu 1.300 m hinauf. Der Kalkstein behielt immer noch seine geschichtete horizontale Formation bei. Aus diesem Grund konnten Regen und Wind im Laufe der Millionen von Jahren diese Schichten zu unglaublichen Formen formen</value>
+  </data>
+  <data name="Antequerainformation22" xml:space="preserve">
+    <value>Um das Herz des Parks zu erreichen, ist es möglich bis zu 1.100 m zu fahren. über dem Meeresspiegel entlang einer guten Zufahrtsstraße in den Park. Einfach in das Dorf gehen</value>
+  </data>
+  <data name="Antequerainformation23" xml:space="preserve">
+    <value>und folgen Sie den Schildern</value>
+  </data>
+  <data name="Antequerainformation24" xml:space="preserve">
+    <value>außerhalb der Stadt ca. 1 km. Es gibt auch eine sehr einfache und malerische Strecke vom Zentrum von Antequera</value>
+  </data>
+  <data name="Antequerainformation25" xml:space="preserve">
+    <value>Auf dem Parkplatz finden Sie ein Informationszentrum, ein kleines Museum, mit einem interessanten Blick auf die Tierwelt, Flora und Fauna des Parks. Orchideen-Enthusiasten werden von den 30 Sorten der im Park wachsenden Pflanzen begeistert sein.</value>
+  </data>
+  <data name="Antequerainformation26" xml:space="preserve">
+    <value>Drei Routen durch den Park für Wanderer wurden mit verschiedenfarbigen Pfeilen auf Holzstäben markiert. Die grüne Route ist die kürzeste und einfachste, 1,5 km. und dauert etwa 30 Minuten. Die gelbe Route deckt den größten Teil der Grünfläche ab und beträgt 2,5 km. lang und bringt Sie zu</value>
+  </data>
+  <data name="Antequerainformation27" xml:space="preserve">
+    <value>Das Windows, auf 1.200 m. für einen Panoramablick auf das Tal von</value>
+  </data>
+  <data name="Antequerainformation28" xml:space="preserve">
+    <value>und an der Mittelmeerküste und an klaren Tagen geradewegs in die Atlasgebirge Nordafrikas.</value>
+  </data>
+  <data name="Antequerainformation29" xml:space="preserve">
+    <value>Schließlich ist die rote Route die längste und schwierigste, 4,5 km. etwa drei Stunden, mit einem Aussichtspunkt 1.339 m. dort, wo Sie das ganze sehen können</value>
+  </data>
+  <data name="Antequerainformation3" xml:space="preserve">
+    <value>Die Stadt und das Tal werden von einem riesigen Kalksteinfelsen überragt, der 880 Meter hoch ist und einem menschlichen Gesicht ähnelt.</value>
+  </data>
+  <data name="Antequerainformation30" xml:space="preserve">
+    <value>Park und die afrikanische Küste.</value>
+  </data>
+  <data name="Antequerainformation31" xml:space="preserve">
+    <value>Du brauchst gute Wanderschuhe oder Turnschuhe, nimm in den warmen Monaten eine Flasche Wasser</value>
+  </data>
+  <data name="Antequerainformation32" xml:space="preserve">
+    <value>Der verzauberte Gebirgszug!</value>
+  </data>
+  <data name="Antequerainformation33" xml:space="preserve">
+    <value>Mehr Informationen zu Städten in Andalusien</value>
+  </data>
+  <data name="Antequerainformation34" xml:space="preserve">
+    <value>aber keiner so groß wie der</value>
+  </data>
+  <data name="Antequerainformation35" xml:space="preserve">
+    <value>Als es im neunzehnten Jahrhundert ausgegraben wurde, wurden viele hundert Skelette in seiner inneren Kammer gefunden</value>
+  </data>
+  <data name="Antequerainformation36" xml:space="preserve">
+    <value>die Kirche von</value>
+  </data>
+  <data name="Antequerainformation37" xml:space="preserve">
+    <value>die Stierkampfarena aus dem 19. Jahrhundert und der 1585 erbaute Bogen der Giganten, der bis zur maurischen Burg aus dem 13. Jahrhundert führt.</value>
+  </data>
+  <data name="Antequerainformation4" xml:space="preserve">
+    <value>Der Name kommt von einer lokalen Legende über eine unmögliche Liebesbeziehung zwischen einem jungen Christen aus Antequera und einem schönen maurischen Mädchen aus dem nahegelegenen Archidona, die von den maurischen Soldaten auf die Spitze der Klippe getrieben wurden, um ihrer Liebe nicht zu entsagen. sie wählten sich in den Abgrund zu stürzen</value>
+  </data>
+  <data name="Antequerainformation5" xml:space="preserve">
+    <value>Eine der eindrucksvollsten Sehenswürdigkeiten von Antequera sind die Dolmen in einem Park im Westen der Stadt, von denen der spektakulärste der</value>
+  </data>
+  <data name="Antequerainformation6" xml:space="preserve">
+    <value>Es gibt viele solcher Dolmen in</value>
+  </data>
+  <data name="Antequerainformation7" xml:space="preserve">
+    <value>Andere faszinierende Denkmäler in der Stadt sind die kürzlich ausgegrabenen römischen Bäder, die prächtige Renaissance-Kirche von</value>
+  </data>
+  <data name="Antequerainformation8" xml:space="preserve">
+    <value>Wir empfehlen die</value>
+  </data>
+  <data name="Antequerainformation9" xml:space="preserve">
+    <value>das</value>
+  </data>
+  <data name="CasaGrandealcala_01" xml:space="preserve">
+    <value>Valorada como una muy buena zona para salir a comer</value>
+  </data>
+  <data name="CasaGrandealcala_02" xml:space="preserve">
+    <value>La Casa grande se encuentra en Alcalá la Real y ofrece alojamiento con balcón. Hay conexión WiFi gratuita.</value>
+  </data>
+  <data name="CasaGrandealcala_03" xml:space="preserve">
+    <value>Algunos alojamientos tienen zona de estar y/o terraza.</value>
+  </data>
+  <data name="CasaGrandealcala_04" xml:space="preserve">
+    <value>Todas las mañanas se sirve un desayuno continental o buffet.</value>
+  </data>
+  <data name="CasaGrandealcala_05" xml:space="preserve">
+    <value>En las inmediaciones se puede practicar ciclismo.</value>
+  </data>
+  <data name="CasaGrandealcala_06" xml:space="preserve">
+    <value>Granada se encuentra a 43 km del bed and breakfast. El aeropuerto Federico García Lorca Granada-Jaén es el más cercano y queda a 33 km de la Casa grande.</value>
+  </data>
+  <data name="CasaGrandealcala_07" xml:space="preserve">
+    <value>A las parejas les encanta la ubicación — Le han puesto un 8,4 para viajes de dos personas.</value>
+  </data>
+  <data name="CasaGrandealcala_08" xml:space="preserve">
+    <value>Este alojamiento también tiene muy buena puntuación por la mejor relación calidad-precio en Alcalá la Real. Los clientes sacan más partido a su dinero en comparación con otros alojamientos de la misma ciudad.</value>
+  </data>
+  <data name="CasaGrandealcala_09" xml:space="preserve">
+    <value>¡Hablamos tu idioma!</value>
+  </data>
+  <data name="ReserveForViewing" xml:space="preserve">
+    <value>Reserve For Viewing</value>
+  </data>
+  <data name="ReserveForViewingOnReceiptTitle" xml:space="preserve">
+    <value>On receipt, we will reserve this property for you to view within 2 weeks. Any price negotiation will be determined after.</value>
+  </data>
+  <data name="SellWithUs" xml:space="preserve">
+    <value>&lt;img src="/images/Sell-with-us-spanish.gif" alt="Sell With Us"&gt;</value>
+  </data>
+</root>

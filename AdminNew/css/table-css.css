@@ -1,0 +1,124 @@
+﻿@charset "utf-8";
+
+/* CSS Document */
+
+
+body { margin:0px;}
+
+.table-outer { width:100%; float:left; background:#cedaea; margin-top:20px; padding:5px 0;}
+.table-inner { width:100%; float:left; background:#fff; padding:10px;}
+.table-outer h2 { color:#2f3193; font-size:26px; margin:5px 0; font-family:Arial, Helvetica, sans-serif;}
+.tab-res  table { width:100%;}
+.open-t { background:#fed103; color:#2d3091; border:1px solid #2d3091;}
+
+.table-outer table { 
+		width: 100%; 
+		border-collapse: collapse; 
+	}
+	/* Zebra striping */
+.table-outer	tr:nth-of-type(odd) { 
+		background: #fff; 
+	}
+.table-outer	th { 
+		background: #303194; 
+		color: white; 
+		font-weight: bold; 
+        width:25%;
+	}
+.table-outer	td, th { 
+		padding: 6px; 
+		border: 1px solid #6a6beb; 
+		text-align: left; 
+	}
+
+@media (min-width:767px){
+    .table-outer td, th{
+        width: 25% !important;
+    }
+}
+
+	
+
+	/*
+	Max width before this PARTICULAR table gets nasty
+	This query will take effect for any screen smaller than 760px
+	and also iPads specifically.
+	*/
+	@media
+	only screen and (max-width: 760px),
+	(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+		/* Force table to not be like tables anymore */
+.table-outer		table, thead, tbody, th, td, tr {
+			display: block;
+		}
+
+		/* Hide table headers (but not display: none;, for accessibility) */
+.table-outer		thead tr {
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+
+.table-outer		tr { border: 1px solid #ccc; }
+
+.table-outer		td {
+			/* Behave  like a "row" */
+			border: none;
+			border-bottom: 1px solid #eee;
+			position: relative;
+			padding-left: 50%;
+		}
+
+	.table-outer	td:before {
+			/* Now like a table header */
+			position: absolute;
+			/* Top/left values mimic padding */
+			top: 6px;
+			left: 6px;
+			width: 45%;
+			padding-right: 10px;
+			white-space: pre-line;
+		}
+
+		/*
+		Label the data
+		*/
+.table-outer		td:nth-of-type(1):before { content: "Tour ID: 1059"; }
+.table-outer		td:nth-of-type(2):before { content: "Tour Date: 2/12/2016"; }
+.table-outer		td:nth-of-type(3):before { content: "Tour By: Raquel"; }
+.table-outer		td:nth-of-type(4):before { content: "Buyer: Alan"; }
+
+	}
+
+	/* Smartphones (portrait and landscape) ----------- */
+	@media only screen
+	and (min-device-width : 0px)
+	and (max-device-width : 480px) {
+		body {
+			padding: 0;
+			margin: 0;
+			width: 100%; }
+			
+			.open-t { padding:1px 3px; font-size:12px;}
+		}
+
+	/* iPads (portrait and landscape) ----------- */
+	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+		body {
+			width: 100%;
+		}
+	}
+
+.clscontrep {
+    width:100%!important;
+}
+
+
+
+
+
+@media only screen and (min-width:0px) and (max-width: 1025px) {
+
+.table-outer th {width: 100%;}
+}
