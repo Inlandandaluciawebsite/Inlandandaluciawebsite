@@ -104,8 +104,8 @@ Partial Class StripePayment
                 'CEmailAdmin.SendEmail("sourabhodesk@gmail.com", SubjectToAdmin, ContentToSalesPerson, True, Nothing, False)
             End If
 
-            CEmailAdmin.SendEmail("sourabhodesk@gmail.com", SubjectToAdmin, ContentToAdmin, True, Nothing, False)
-            CEmailAdmin.SendEmail("jerome@inlandandalucia.com", SubjectToAdmin, ContentToAdmin, True, Nothing, False)
+            'CEmailAdmin.SendEmail("sourabhodesk@gmail.com", SubjectToAdmin, ContentToAdmin, True, Nothing, False)
+            'CEmailAdmin.SendEmail("jerome@inlandandalucia.com", SubjectToAdmin, ContentToAdmin, True, Nothing, False)
             CEmailAdmin = Nothing
         Catch ex As Exception
             'lblError.Text = ex.InnerException.ToString()
