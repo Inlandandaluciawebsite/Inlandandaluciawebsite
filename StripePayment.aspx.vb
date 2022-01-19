@@ -34,8 +34,8 @@ Partial Class StripePayment
             Page.RegisterStartupScript("script", "<script language='javascript'>alert('You have already been reserved this property, please check your email. Thanks !');</script>")
         Else
             If txtAmount.Text <> "" Then
-                'StripeConfiguration.ApiKey = "sk_test_r04LuCbZ4hze5EcdCzqvxyUC"
-                StripeConfiguration.ApiKey = "sk_live_IIsyEX1afAdNR3c5e5gEsOPl"
+                StripeConfiguration.ApiKey = "sk_test_r04LuCbZ4hze5EcdCzqvxyUC"
+                'StripeConfiguration.ApiKey = "sk_live_IIsyEX1afAdNR3c5e5gEsOPl"
                 Dim service = New PaymentIntentService()
                 Dim options = New PaymentIntentCreateOptions With {
                             .Amount = Convert.ToInt32(txtAmount.Text) * 100,
