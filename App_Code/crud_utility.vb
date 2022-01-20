@@ -12,4 +12,9 @@ Public Class crud_utility
     Public Function GetAllPartners_Having_Property() As DataTable
         Return SqlHelper.ExecuteDataset(MyCon, CommandType.StoredProcedure, "USP_tblContact_Get_Partner_Having_Property").Tables(0)
     End Function
+    Public Function GetAllListedBy(Partner_Id As Integer) As DataTable
+        Dim sqldata As SqlParameter() = New SqlParameter(1) {}
+        sqldata(0) = New SqlParameter("@Partner_Id", Partner_Id)
+        Return SqlHelper.ExecuteDataset(MyCon, CommandType.StoredProcedure, "USP_tblProperty_Get_Listed_By", sqldata).Tables(0)
+    End Function
 End Class
