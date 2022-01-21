@@ -530,7 +530,7 @@ Public Class ClassEmail
                             CheckListerEmailAlreadyExists(ListerEmail, "natalja@inlandandalucia.com")
                         End If
                     End If
-                    If ActionType = "For Sale" Or ActionType = "Under Offer" Or ActionType = "Withdrawn" Or ActionType = "Sold" Or ActionType = "Sold by Comp" Then
+                    If ActionType = "PriceChanged" Or ActionType = "For Sale" Or ActionType = "Under Offer" Or ActionType = "Withdrawn" Or ActionType = "Sold" Or ActionType = "Sold by Comp" Then
                         mMailMessage.CC.Add(New MailAddress("hans@inlandadalucia.com"))
                         If ListerEmail <> "" Then
                             CheckListerEmailAlreadyExists(ListerEmail, "hans@inlandadalucia.com")
