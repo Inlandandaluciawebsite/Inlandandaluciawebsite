@@ -97,10 +97,24 @@
                                     <div class="col-md-3 col-sm-3">
                                         <asp:DropDownList ID="drpAllORPartner" runat="server" CssClass="form-control" Visible="false" OnSelectedIndexChanged="drpAllORPartner_SelectedIndexChanged" AutoPostBack="true">
                                         </asp:DropDownList>
-                                        <p class="text-right" style="font-weight: 800">
-                                            <asp:Label ID="lbltotlacount" runat="server"></asp:Label>
-                                            Result(s)
-                                        </p>
+                                       
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4">
+                                        <div id="sample_1_filter2" class="inp">
+                                            &nbsp;
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-3">
+                                        &nbsp;
+                                    </div>
+                                    <div class="col-md-2 col-sm-2">
+                                        &nbsp;
+                                    </div>
+                                    <div class="col-md-3 col-sm-3">
+                                        <asp:DropDownList ID="drpListedByFilter" runat="server" CssClass="form-control" OnSelectedIndexChanged="drpListedByFilter_SelectedIndexChanged" AutoPostBack="true">
+                                        </asp:DropDownList>
                                     </div>
                                 </div>
                                 <div class="row custom_7">
@@ -136,6 +150,10 @@
                                             <asp:ListItem Text="Red" Value="Red"></asp:ListItem>
                                             <asp:ListItem Text="Yellow" Value="Yellow"></asp:ListItem>
                                         </asp:DropDownList>
+                                         <p class="text-right" style="font-weight: 800">
+                                            <asp:Label ID="lbltotlacount" runat="server"></asp:Label>
+                                            Result(s)
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="table-scrollable">
