@@ -444,14 +444,14 @@ Public Class ClassEmail
                     mMailMessage.CC.Add(New MailAddress("Antonia@inlandandalucia.com"))
                     mMailMessage.CC.Add(New MailAddress("alejandrocanterolawyer@gmail.com"))
                     'Condition set for Raquel
-                    If ActionType = "For Sale" Or ActionType = "Under Offer" Or ActionType = "Withdrawn" Or ActionType = "Sold" Or ActionType = "Sold by Comp" Then
+                    If ActionType = "PriceChanged" Or ActionType = "For Sale" Or ActionType = "Under Offer" Or ActionType = "Withdrawn" Or ActionType = "Sold" Or ActionType = "Sold by Comp" Then
                         mMailMessage.CC.Add(New MailAddress("raquel@inlandandalucia.com"))
                         If ListerEmail <> "" Then
                             CheckListerEmailAlreadyExists(ListerEmail, "raquel@inlandandalucia.com")
                         End If
                     End If
                     'Condition set for Hayley
-                    If ActionType = "For Sale" Or ActionType = "Under Offer" Or ActionType = "Withdrawn" Or ActionType = "Sold by Comp" Then
+                    If ActionType = "PriceChanged" Or ActionType = "For Sale" Or ActionType = "Under Offer" Or ActionType = "Withdrawn" Or ActionType = "Sold by Comp" Then
                         mMailMessage.CC.Add(New MailAddress("Hayley@inlandandalucia.com"))
                         If ListerEmail <> "" Then
                             CheckListerEmailAlreadyExists(ListerEmail, "Hayley@inlandandalucia.com")
@@ -530,6 +530,12 @@ Public Class ClassEmail
                             CheckListerEmailAlreadyExists(ListerEmail, "natalja@inlandandalucia.com")
                         End If
                     End If
+                    If ActionType = "For Sale" Or ActionType = "Under Offer" Or ActionType = "Withdrawn" Or ActionType = "Sold" Or ActionType = "Sold by Comp" Then
+                        mMailMessage.CC.Add(New MailAddress("hans@inlandadalucia.com"))
+                        If ListerEmail <> "" Then
+                            CheckListerEmailAlreadyExists(ListerEmail, "hans@inlandadalucia.com")
+                        End If
+                    End If
                     If ListerEmail <> "" Then
                         CheckListerEmailAlreadyExists(ListerEmail, "david@inlandandalucia.com")
                         'CheckListerEmailAlreadyExists(ListerEmail, "philippe@inlandandalucia.com")
@@ -592,14 +598,14 @@ Public Class ClassEmail
                 Case 10391
                     mMailMessage.CC.Add(New MailAddress("Alejandro@inlandandalucia.com"))
                     mMailMessage.CC.Add(New MailAddress("Antonia@inlandandalucia.com"))
-                    If ActionType = "For Sale" Or ActionType = "Under Offer" Or ActionType = "Withdrawn" Or ActionType = "Sold" Or ActionType = "Sold by Comp" Then
+                    If ActionType = "PriceChanged" Or ActionType = "For Sale" Or ActionType = "Under Offer" Or ActionType = "Withdrawn" Or ActionType = "Sold" Or ActionType = "Sold by Comp" Then
                         mMailMessage.CC.Add(New MailAddress("raquel@inlandandalucia.com"))
                         If ListerEmail <> "" Then
                             CheckListerEmailAlreadyExists(ListerEmail, "raquel@inlandandalucia.com")
                         End If
                     End If
                     'Condition set for Hayley
-                    If ActionType = "For Sale" Or ActionType = "Under Offer" Or ActionType = "Withdrawn" Or ActionType = "Sold by Comp" Then
+                    If ActionType = "PriceChanged" Or ActionType = "For Sale" Or ActionType = "Under Offer" Or ActionType = "Withdrawn" Or ActionType = "Sold by Comp" Then
                         mMailMessage.CC.Add(New MailAddress("Hayley@inlandandalucia.com"))
                         If ListerEmail <> "" Then
                             CheckListerEmailAlreadyExists(ListerEmail, "Hayley@inlandandalucia.com")
