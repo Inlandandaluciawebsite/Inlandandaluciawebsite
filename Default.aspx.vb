@@ -83,7 +83,7 @@ Partial Class _Default
                 NotifyFeaturedProperty()
                 NotifyOrangeBlue()
                 NotifyOrangeBlue_To_Partners()
-                NotifyFeedLog()
+                'NotifyFeedLog()
             End If
         End If
     End Sub
@@ -403,7 +403,7 @@ Partial Class _Default
         End Try
     End Sub
     Public Sub NotifyFeedLog()
-        Dim dtCheckFeedLogs As DataTable = SqlHelper.ExecuteDataset(ConfigurationManager.ConnectionStrings("con").ConnectionString, CommandType.StoredProcedure, "USP_Check_Latest_FeedLog").Tables(0)
+        Dim dtCheckFeedLogs As DataTable = SqlHelper.ExecuteDataset(ConfigurationManager.ConnectionStrings("con").ConnectionString, CommandType.StoredProcedure, "USP_FeedCheckLog_Insert").Tables(0)
         If dtCheckFeedLogs.Rows.Count > 0 Then
             If dtCheckFeedLogs.Rows(0)("CheckDate").ToString() = "2" And dtCheckFeedLogs.Rows(0)("TodayDate").ToString() = "0" Then
                 Dim mailTitleFeedLog As String = ""

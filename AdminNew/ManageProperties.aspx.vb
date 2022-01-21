@@ -18,9 +18,6 @@ Partial Class Admin_ManageProperties
             Response.Redirect("~/AgentLogin.aspx")
         End If
         If Not IsPostBack Then
-            If Not Request.QueryString("ViewAll") Is Nothing Then
-                drpListedByFilter.Visible = False
-            End If
             ViewState("SortExpressionCP") = "Created DESC"
             bindtype()
             bindregion()
@@ -36,7 +33,6 @@ Partial Class Admin_ManageProperties
                 drpAllORPartner.Visible = False
             End If
             bindAllPartner()
-            bindAllListedBy()
             If Not Request.QueryString("PageIndex") Is Nothing Then
                 txtreference.Text = Request.QueryString("Ref").ToString()
                 txtaddress.Text = Request.QueryString("Address").ToString()
@@ -190,27 +186,6 @@ Partial Class Admin_ManageProperties
         drpAllORPartner.Items.Insert(0, firstItem)
         'drpAllORPartner.Items.Add(firstItem)
     End Sub
-    Private Sub bindAllListedBy()
-        Dim crudutil As New crud_utility
-        Dim dtListedBy As DataTable
-        Dim Partner_Id As Int32 = 0
-        If Convert.ToBoolean(Session("AdminUser")) Then
-            Partner_Id = 0
-        Else
-            Partner_Id = Convert.ToInt32(Session("ContactPartnerID"))
-        End If
-        dtListedBy = crudutil.GetAllListedBy(Partner_Id)
-        drpListedByFilter.DataSource = dtListedBy
-        drpListedByFilter.DataTextField = "Listed_By_Name"
-        drpListedByFilter.DataValueField = "listed_by_contact_id"
-        drpListedByFilter.DataBind()
-        Dim firstItem As New ListItem With {
-                .Text = "LISTED BY",
-                .Value = 0
-            }
-        drpListedByFilter.Items.Insert(0, firstItem)
-        'drpAllORPartner.Items.Add(firstItem)
-    End Sub
     Private Sub bindregion()
         Dim dt As DataTable = SqlHelper.ExecuteDataset(ConfigurationManager.ConnectionStrings("con").ConnectionString, CommandType.StoredProcedure, "Usp_AdminRegion_ShowAll").Tables(0)
         If dt.Rows.Count > 0 Then
@@ -361,7 +336,6 @@ Partial Class Admin_ManageProperties
         sql(7) = New SqlParameter("@Baths", drpbathrooms.SelectedIndex - 1)
         sql(8) = New SqlParameter("@Status", DropDownListStatus.SelectedValue)
         sql(9) = New SqlParameter("@IsFeatured", 0)
-        sql(10) = New SqlParameter("@Listed_By_Contact_Id", drpListedByFilter.SelectedItem.Value)
         Dim dt As DataTable
         If drpAllORPartner.Visible = True Then
             If drpAllORPartner.SelectedItem.Value = 0 Then
@@ -435,9 +409,6 @@ Partial Class Admin_ManageProperties
         bindadmin()
     End Sub
     Protected Sub drpColors_SelectedIndexChanged(sender As Object, e As EventArgs)
-        bindadmin()
-    End Sub
-    Protected Sub drpListedByFilter_SelectedIndexChanged(sender As Object, e As EventArgs)
         bindadmin()
     End Sub
 End Class

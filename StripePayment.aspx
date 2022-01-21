@@ -16,8 +16,8 @@
                 alert("Please enter booking amount to reserve this property !");
                 return false;
             }
-            if (parseInt(document.getElementById('txtAmount').value) < 600) {
-                alert("Please Select the amount above 600.");
+            if (parseInt(document.getElementById('txtAmount').value) < 500) {
+                alert("Please Select the amount above 500.");
                 return false;
             }
             else {
@@ -210,8 +210,8 @@
     </form>
     <script src="https://js.stripe.com/v3/"></script>
     <script type="text/javascript" lang="javascript">
-        var stripe = Stripe('pk_test_dKUXdwSFhfmvFsRXjqk1Ksw8');
-        //var stripe = Stripe('pk_live_D0Fo1miKIFgSzk14xavTlVrb');
+        //var stripe = Stripe('pk_test_dKUXdwSFhfmvFsRXjqk1Ksw8');
+        var stripe = Stripe('pk_live_D0Fo1miKIFgSzk14xavTlVrb');
         
         var elements = stripe.elements();
         // Custom styling can be passed to options when creating an Element.
