@@ -687,10 +687,10 @@ Partial Class ClientTours
         Dim Buyer_Status_Id As Int32 = 0
         Dim history_text As String = ""
         If chkVirtualTour.Checked Then
-            Buyer_Status_Id = 11
+            Buyer_Status_Id = 13
             history_text = "Virtual Tour has been created or modified for this client"
         Else
-            Buyer_Status_Id = 5
+            Buyer_Status_Id = 12
             history_text = "Tour has been created or modified for this client"
         End If
         ' Local Vars
