@@ -137,7 +137,7 @@ Partial Class _Default
                                 nStatusID = 7
                             End If
                         End If
-                            dr(col) = CUtilities.ApplyStatusWatermark(szImageURL, nStatusID)
+                        dr(col) = CUtilities.ApplyStatusWatermark(szImageURL, nStatusID)
                     End If
                     row.Add(col.ColumnName, dr(col))
                 Next
